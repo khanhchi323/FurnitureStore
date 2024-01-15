@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('card_number_hash', 130);
             $table->date('expiration_date');
             $table->string('cvv_hash', 130);
-            $table->string('paypal_email', 100)->nullable();
+
             $table->timestamps();
 
 

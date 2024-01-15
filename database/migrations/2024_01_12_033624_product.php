@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description');
             $table->unsignedBigInteger('product_category_id');
             $table->decimal('price', 11, 2);
-            $table->unsignedBigInteger('discount_id')->nullable();
+            $table->unsignedBigInteger('discount_id');
             $table->timestamps();
             $table->softDeletes();
 

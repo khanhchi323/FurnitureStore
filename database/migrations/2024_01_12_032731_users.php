@@ -19,12 +19,11 @@ return new class extends Migration
             $table->string('username', 50);
             $table->string('password', 130);
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('avt_image', 50)->nullable();
+            $table->string('avt_image', 50);
             $table->rememberToken();
             $table->string('first_name', 20);
             $table->string('last_name', 20);
-            $table->string('telephone', 11);
+            $table->string('phonenumber', 11);
             $table->timestamps();
             $table->softDeletes();
 
