@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('product_image', function(Blueprint $table){
-            $table->BigIncrements('image_id');
-            $table->string('image_name', 50);
-            $table->string('image_url', 50);
+        Schema::create('product_status', function(Blueprint $table){
+            $table->bigIncrements('product_status_id');
+            $table->string('product_status_name',50);
         });
+
     }
 
     /**
@@ -27,7 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExits('product_image');
-        
+        Schema::dropIfExists('product_status');
     }
 };

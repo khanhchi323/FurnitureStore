@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('password', 130);
             $table->string('email')->unique();
             $table->string('avt_image', 50);
-            $table->rememberToken();
             $table->string('first_name', 20);
             $table->string('last_name', 20);
             $table->string('phonenumber', 11);
