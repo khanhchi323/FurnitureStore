@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom';
 import './index.css'
+import App from './App';
+import MenuBar from './components/MenuBar';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <BrowserRouter>
+  <MenuBar/>
     <App />
-  </React.StrictMode>,
-)
+    
+  </BrowserRouter>,
+);
