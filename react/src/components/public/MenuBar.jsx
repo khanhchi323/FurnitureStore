@@ -15,6 +15,7 @@ import {
 import {
     CubeTransparentIcon,
     UserCircleIcon,
+    HomeIcon,
     CodeBracketSquareIcon,
     Square3Stack3DIcon,
     ChevronDownIcon,
@@ -25,28 +26,25 @@ import {
     RocketLaunchIcon,
     Bars2Icon,
 } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 // profile menu component
 const profileMenuItems = [
     {
         label: "My Profile",
         icon: UserCircleIcon,
+        link: "/profile",
     },
     {
         label: "Edit Profile",
         icon: Cog6ToothIcon,
+        link: "/edit-profile",
     },
-    {
-        label: "Inbox",
-        icon: InboxArrowDownIcon,
-    },
-    {
-        label: "Help",
-        icon: LifebuoyIcon,
-    },
+    
     {
         label: "Sign Out",
         icon: PowerIcon,
+        link: "/profile",
     },
 ];
 
@@ -72,36 +70,42 @@ function ProfileMenu() {
                     />
                     <ChevronDownIcon
                         strokeWidth={2.5}
-                        className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
-                            }`}
+                        className={`h-3 w-3 transition-transform ${
+                            isMenuOpen ? "rotate-180" : ""
+                        }`}
                     />
                 </Button>
             </MenuHandler>
             <MenuList className="p-1">
-                {profileMenuItems.map(({ label, icon }, key) => {
+                {profileMenuItems.map(({ label, icon, link }, key) => {
                     const isLastItem = key === profileMenuItems.length - 1;
                     return (
-                        <MenuItem
-                            key={label}
-                            onClick={closeMenu}
-                            className={`flex items-center gap-2 rounded ${isLastItem
-                                ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
-                                : ""
+                        <Link to={link}>
+                            <MenuItem
+                                key={label}
+                                onClick={closeMenu}
+                                className={`flex items-center gap-2 rounded ${
+                                    isLastItem
+                                        ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
+                                        : ""
                                 }`}
-                        >
-                            {React.createElement(icon, {
-                                className: `h-4 w-4 ${isLastItem ? "text-red-500" : ""}`,
-                                strokeWidth: 2,
-                            })}
-                            <Typography
-                                as="span"
-                                variant="small"
-                                className="font-normal"
-                                color={isLastItem ? "red" : "inherit"}
                             >
-                                {label}
-                            </Typography>
-                        </MenuItem>
+                                {React.createElement(icon, {
+                                    className: `h-4 w-4 ${
+                                        isLastItem ? "text-red-500" : ""
+                                    }`,
+                                    strokeWidth: 2,
+                                })}
+                                <Typography
+                                    as="span"
+                                    variant="small"
+                                    className="font-normal"
+                                    color={isLastItem ? "red" : "inherit"}
+                                >
+                                    {label}
+                                </Typography>
+                            </MenuItem>
+                        </Link>
                     );
                 })}
             </MenuList>
@@ -137,7 +141,11 @@ function NavListMenu() {
                 <Typography variant="h6" color="blue-gray" className="mb-1">
                     {title}
                 </Typography>
-                <Typography variant="small" color="gray" className="font-normal">
+                <Typography
+                    variant="small"
+                    color="gray"
+                    className="font-normal"
+                >
                     {description}
                 </Typography>
             </MenuItem>
@@ -147,19 +155,7 @@ function NavListMenu() {
     return (
         <React.Fragment>
             <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
-                <MenuHandler>
-                    <Typography as="a" href="#" variant="small" className="font-normal">
-                        <MenuItem className="hidden items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full">
-                            <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
-                            Pages{" "}
-                            <ChevronDownIcon
-                                strokeWidth={2}
-                                className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
-                                    }`}
-                            />
-                        </MenuItem>
-                    </Typography>
-                </MenuHandler>
+                
                 <MenuList className="hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid">
                     <Card
                         color="blue"
@@ -167,7 +163,10 @@ function NavListMenu() {
                         variant="gradient"
                         className="col-span-3 grid h-full w-full place-items-center rounded-md"
                     >
-                        <RocketLaunchIcon strokeWidth={1} className="h-28 w-28" />
+                        <RocketLaunchIcon
+                            strokeWidth={1}
+                            className="h-28 w-28"
+                        />
                     </Card>
                     <ul className="col-span-4 flex w-full flex-col gap-1">
                         {renderItems}
@@ -188,15 +187,15 @@ function NavListMenu() {
 // nav list component
 const navListItems = [
     {
-        label: "Account",
-        icon: UserCircleIcon,
+        label: "Home",
+        icon: HomeIcon,
     },
     {
-        label: "Blocks",
+        label: "Categories",
         icon: CubeTransparentIcon,
     },
     {
-        label: "Docs",
+        label: "About us",
         icon: CodeBracketSquareIcon,
     },
 ];
@@ -215,7 +214,9 @@ function NavList() {
                     className="font-medium text-blue-gray-500"
                 >
                     <MenuItem className="flex items-center gap-2 lg:rounded-full">
-                        {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
+                        {React.createElement(icon, {
+                            className: "h-[18px] w-[18px]",
+                        })}{" "}
                         <span className="text-gray-900"> {label}</span>
                     </MenuItem>
                 </Typography>
@@ -232,7 +233,7 @@ export default function MenuBar() {
     React.useEffect(() => {
         window.addEventListener(
             "resize",
-            () => window.innerWidth >= 960 && setIsNavOpen(false),
+            () => window.innerWidth >= 960 && setIsNavOpen(false)
         );
     }, []);
 
@@ -244,10 +245,10 @@ export default function MenuBar() {
                     href="#"
                     className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
                 >
-                    Material Tailwind
+                    CCHLB
                 </Typography>
                 <div className="hidden lg:block">
-                    <NavList />
+                    <NavList/>
                 </div>
                 <IconButton
                     size="sm"
