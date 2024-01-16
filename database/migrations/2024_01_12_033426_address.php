@@ -13,15 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('shopping_cart', function (Blueprint $table) {
-            $table->bigIncrements('shopping_cart_id');
+        Schema::create('address', function (Blueprint $table) {
+            $table->bigIncrements('address_id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('product_id');
-            $table->integer('quantity');
+            $table->string('number', 50);
+            $table->string('street', 50);
+            $table->string('commune', 50);
+            $table->string('district', 50);
+            $table->string('province', 50);
+            $table->string('country', 50);
+            $table->string('postal_code', 50);
             $table->timestamps();
 
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade')->onUpdate('cascade'); // Thêm khóa ngoại đến bảng users
-            $table->foreign('product_id')->references('product_id')->on('product')->onDelete('cascade')->onUpdate('cascade'); // Thêm khóa ngoại đến bảng products
+
         });
     }
 
@@ -32,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shopping_cart');
+        Schema::dropIfExists('user_address');
     }
 };
