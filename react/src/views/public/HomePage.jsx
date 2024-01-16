@@ -3,14 +3,16 @@ import MainBanner from '../../components/public/MainBanner';
 import ProductReview from '../../components/public/ProductReview';
 import CategoryBar from '../../components/public/CategoryBar';
 import ProductReview2 from '../../components/public/ProductRiew2';
+import Container from '../../components/public/Container';
 
 export default function HomePage() {
   return (
     <div>
         <MainBanner/>
-        <ProductReview/>
-        <CategoryBar/>
-        <ProductReview2/>
+        {/* <ProductReview/> */}
+        {/* <CategoryBar/> */}
+        <Container/>
+        {/* <ProductReview2/> */}
     </div>
   )
 }

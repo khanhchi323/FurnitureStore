@@ -1,19 +1,19 @@
 import { Carousel } from "@material-tailwind/react";
 
-import sale3 from "../../assets/public/banner/sale3.png"
-import sale4 from "../../assets/public/banner/sale4.png"
-import sale5 from "../../assets/public/banner/sale5.png"
-import sale6 from "../../assets/public/banner/sale6.png"
-import sale7 from "../../assets/public/banner/sale7.png"
-import sale8 from "../../assets/public/banner/sale8.png"
+import sale3 from "../../assets/public/banner/intro1.jpg"
+import sale4 from "../../assets/public/banner/intro2.jpg"
+// import sale5 from "../../assets/public/banner/sale5.png"
+// import sale6 from "../../assets/public/banner/sale6.png"
+// import sale7 from "../../assets/public/banner/sale7.png"
+// import sale8 from "../../assets/public/banner/sale8.png"
 
 export default function MainBanner() {
-    const imagePaths = [sale3, sale4, sale5, sale6, sale7, sale8];
+    const imagePaths = [sale3, sale4];
 
     return (
         <div className="flex items-center justify-center my-10">
             <Carousel
-                className="rounded-xl 2xl:w-[80%] md:w-[90%] w-[95%]"
+                className="rounded-xl 2xl:w-[80%] md:w-[90%] w-[80%]"
                 navigation={({ setActiveIndex, activeIndex, length }) => (
                     <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
                         {new Array(length).fill("").map((_, i) => (
