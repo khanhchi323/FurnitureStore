@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./views/public/HomePage";
 import HomePage from "./views/public/HomePage";
 import LoginPage from "./views/public/LoginPage";
 import RegisterPage from "./views/public/RegisterPage";
@@ -8,6 +7,7 @@ import ProfilePage from "./views/public/ProfilePage";
 import EditProfilePage from "./views/public/EditProfilePage";
 import ProductPage from "./views/public/ProductPage";
 import ProductDetailPage from "./views/public/ProductDetailPage";
+import AboutUsPage from "./views/public/AboutUsPage"
 export default function App() {
 
   return (
@@ -20,6 +20,7 @@ export default function App() {
         <Route path='/edit-profile' element={<EditProfilePage />}></Route>
         <Route path='/product' element={<ProductPage />}></Route>
         <Route path='/product-detail' element={<ProductDetailPage />}></Route>
+        <Route path='/about-us' element={<AboutUsPage />}></Route>
       </Routes>
     </div>
   );

@@ -41,7 +41,16 @@ const profileMenuItems = [
         icon: Cog6ToothIcon,
         link: "/edit-profile",
     },
-
+    {
+        label: "Log In",
+        icon: Cog6ToothIcon,
+        link: "/login",
+    },
+    {
+        label: "Register",
+        icon: Cog6ToothIcon,
+        link: "/register",
+    },
     {
         label: "Sign Out",
         icon: PowerIcon,
@@ -189,14 +198,17 @@ const navListItems = [
     {
         label: "Home",
         icon: HomeIcon,
+        link: "/",
     },
     {
         label: "Categories",
         icon: CubeTransparentIcon,
+        link: "/product",
     },
     {
         label: "About us",
         icon: CodeBracketSquareIcon,
+        link: "/about-us",
     },
 ];
 
@@ -260,12 +272,10 @@ export default function MenuBar() {
                     <Bars2Icon className="h-6 w-6" />
                 </IconButton>
 
-                <Button size="sm" variant="text">
-                    <span>Log In</span>
-                </Button>
-                <div className="w-72">
+                
+                <div className="w-72 ml-2">
                     <Input
-                        label="Input With Icon"
+                        label="Search..."
                         icon={
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
