@@ -32,7 +32,7 @@ class UsersController extends Controller
             $validateUser = Validator::make(
                 $request->all(),
                 [
-                    'email' => 'required|email',
+                    'email' => 'required|email|exists:users,email',
                     'password' => 'required'
                 ]
             );
@@ -77,7 +77,7 @@ class UsersController extends Controller
                 [
                     'username' => 'required',
                     'password' => 'required|min:6',
-                    'email' => 'required|email',
+                    'email' => 'required|string|email|max:255|unique:users',
                     //'first_name' => 'required',
                     //'last_name' => 'required',
                     //'telephone' => 'required'
