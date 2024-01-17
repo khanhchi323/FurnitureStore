@@ -1,4 +1,5 @@
 import React from 'react';
+import Chair from "../../assets/product/chair/Chair.svg"
 
 export default function ProductReview() {
 
@@ -8,21 +9,21 @@ export default function ProductReview() {
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, incidunt!',
             price: '29.99',
             color: 'purple',
-            image: 'https://www.dropbox.com/s/mlor33hzk73rh0c/x14423.png?dl=1',
+            image: Chair,
         },
         {
             name: 'Comfortable Wooden Chair',
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, incidunt!',
             price: '39.99',
             color: 'green',
-            image: 'https://www.dropbox.com/s/8ymeus1n9k9bhpd/y16625.png?dl=1',
+            image: Chair,
         },
         {
             name: 'Multipurpose Wooden Trolly',
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, incidunt!',
             price: '19.99',
             color: 'red',
-            image: 'https://www.dropbox.com/s/ykdro56f2qltxys/hh2774663-87776.png?dl=1',
+            image: Chair,
         },
         {
             name: 'Multipurpose Wooden Tool',
