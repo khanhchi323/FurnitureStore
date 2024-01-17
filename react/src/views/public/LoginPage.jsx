@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function registerForm() {
+export default function LogInForm() {
     return (
         <div className="font-sans m-0 p-0 flex items-center justify-center bg-white h-screen">
             <div className="  w-96 p-20px rounded-lg shadow-lg shadow-neutral-950 z-10 ">
@@ -45,13 +45,13 @@ export default function registerForm() {
                             className=" transition  bg-green-900 text-white px-[2rem] py-1 mt-3  text-lg cursor-pointer rounded-full hover:bg-white hover:text-green-800 transition-colors duration-300 ease-in-out"
                             type="submit"
                         >
-                            Register
+                            Log in 
                         </button>
                     </div>
                     <div className="pt-3 pb-3 text-center shadow.md">
                         Already have an account?{" "}
                         <Link to="" className=" text-green-800" href="/login">
-                            Log in
+                            Register
                         </Link>
                     </div>
                 </form>
