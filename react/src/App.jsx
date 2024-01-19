@@ -8,6 +8,7 @@ import EditProfilePage from "./views/public/EditProfilePage";
 import ProductPage from "./views/public/ProductPage";
 import ProductDetailPage from "./views/public/ProductDetailPage";
 import AboutUsPage from "./views/public/AboutUsPage"
+import CartPage from "./views/public/CartPage"
 export default function App() {
 
   return (
@@ -21,6 +22,8 @@ export default function App() {
         <Route path='/product' element={<ProductPage />}></Route>
         <Route path='/product-detail' element={<ProductDetailPage />}></Route>
         <Route path='/about-us' element={<AboutUsPage />}></Route>
+        <Route path='/cart-page' element={<CartPage />}></Route>
+
       </Routes>
     </div>
   );
