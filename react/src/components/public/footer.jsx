@@ -23,7 +23,7 @@ export default function Footer() {
         <footer className=" relative w-full mt-8 bg-[#EEEDEA]">
             <div className="mx-auto w-full max-w-7xl px-8 pt-8">
                 <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-                    <div variant="h5" className="mb-6 p-12">
+                    <div variant="h5" className="mb-6 p-6"> 
                         <p className = "font-bold">CCHLB</p>
                         <p><b>Trụ sở chính:</b>18/1A Cộng Hòa, phường 4, quận Tân Bình, TP.Hồ Chí Minh</p>
                         <p><b>Liên hệ với chúng tôi:</b> 0911252719</p>
