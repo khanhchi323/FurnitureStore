@@ -16,7 +16,7 @@ export default function CartPage() {
                         </div>
                         <div className="text-right w-full pr-4 self-center lg:text-left  ">
                             <div class="content max-w-xs overflow-hidden">
-                                <p class="truncate text-sm md:text-lg self-center  font-bold text-gray-900">Cabinet</p>
+                                <p class="truncate text-sm md:text-lg self-center  font-bold text-gray-900">Cabinetttttttttttttttttttttttttttttttttttttttttttttttttttttt</p>
                             </div>
                             <p className="mt-3 text-xs text-gray-700">CAB-GR</p>
                             <span className=" cursor-pointer rounded-l bg-gray-400 py-1.5 pb-2 px-2.5 duration-100 hover:bg-red-500 hover:text-blue-50"> - </span>
