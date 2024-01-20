@@ -1,28 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const categories = [
   { name: 'Chair', imageUrl:'https://sofaz.vn/upload/images/truong/nhap-khau/ghe-an-nhap-khau/ghe-an-hien-dai-cao-cap-2-.jpg' },
-  { name: 'Table', imageUrl:'https://bamboofurni.com/images/companies/1/Blog/H%C3%ACnh%20%E1%BA%A3nh/Ph%C3%B2ng%20L%C3%A0m%20Vi%E1%BB%87c%20%C4%90%E1%BA%B9p/B%C3%A0n%20L%C3%A0m%20Vi%E1%BB%87c%20G%E1%BB%97/38.ban-go-lam-viec.jpg?1557387292943' },
   { name: 'Lamp', imageUrl: 'https://down-th.img.susercontent.com/file/sg-11134201-7rblx-lq2c21y7r24k4c' },
-  { name: 'Tree', imageUrl: 'https://media.istockphoto.com/id/1380361370/vi/anh/c%C3%A2y-chu%E1%BB%91i-trang-tr%C3%AD-trong-b%C3%ACnh-b%C3%AA-t%C3%B4ng-c%C3%A1ch-ly-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng.jpg?s=612x612&w=0&k=20&c=WT9ig3iO4qEEZLkFDasDG_tj_2r_Xy0nj5gO77_RUZc=' },
+  { name: 'carpet', imageUrl: 'https://tileandcarpet.co.ke/wp-content/uploads/2022/10/KBGIZA12_2_1.jpg' },
   { name: 'Item', imageUrl: 'https://noithatvuongphat.com/wp-content/uploads/2023/03/Anh-2-Tu-quan-ao-go-cong-nghiep-voi-duong-net-thiet-ke-hien-dai.jpg' },
+  { name: 'bed', imageUrl: 'https://www.ikea.com/sa/en/images/products/idanaes-bed-frame-dark-brown-loenset__1101606_pe866776_s5.jpg' },
+  { name: 'mirror', imageUrl: 'https://rukminim2.flixcart.com/image/850/1000/l0pm3680/mirror/z/h/g/frameless-round-frame-wall-mirror-with-touch-sensor-light-for-original-imagcfsqceynvmjz.jpeg?q=90&crop=false' },
+  { name: 'table', imageUrl: 'https://admin.regalfurniturebd.com/storage/uploads/fullsize/2023-04/rth-204view-01vraydenoiser.jpg' },
 ];
 
 const CategoryCard = ({ category }) => (
-  <div className="flex flex-col items-center m-4 bg-white rounded-lg shadow-md">
-    <img className="w-full h-32 rounded-t-lg" src={category.imageUrl} alt={category.name} />
-    <div className="p-9">
+  <div className="flex flex-col items-center m-4 bg-white rounded-lg shadow-md w-32 h-32">
+    <img className="w-full h-full rounded-t-lg object-cover" src={category.imageUrl} alt={category.name} />
+    <div className="p-2">
       <h2 className="font-bold">{category.name}</h2>
     </div>
   </div>
 );
 
-const Category = () => (
-  <div className="flex flex-wrap justify-center p-4">
-    {categories.map((category) => (
-      <CategoryCard key={category.name} category={category} />
-    ))}
-  </div>
-);
+const Category = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextCategory = () => {
+    if (currentIndex < categories.length - 2) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const prevCategory = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  return (
+    <>
+      <div className="flex items-center justify-center p-4">
+        <button onClick={prevCategory} className="p-2 bg-gray-500 text-white rounded-lg mr-2">
+          ←
+        </button>
+        {categories.slice(currentIndex, currentIndex + 5).map((category) => (
+          <CategoryCard key={category.name} category={category} />
+        ))}
+        <button onClick={nextCategory} className="p-2 bg-gray-500 text-white rounded-lg ml-2">
+          →
+        </button>
+      </div>
+    </>
+  );
+};
 
 export default Category;
