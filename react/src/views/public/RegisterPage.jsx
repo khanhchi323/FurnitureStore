@@ -53,6 +53,7 @@ export default function registerPage() {
                             id="username"
                             name="username"
                             required
+                            placeholder="User name"
                         />
                     </div>
                     <div className="mr-25px mb-20px rounded-sm">

@@ -9,6 +9,7 @@ import ProductPage from "./views/public/ProductPage";
 import ProductDetailPage from "./views/public/ProductDetailPage";
 import AboutUsPage from "./views/public/AboutUsPage"
 import CartPage from "./views/public/CartPage"
+import CreAcc from "./views/public/CreAcc";
 export default function App() {
 
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path='/product-detail' element={<ProductDetailPage />}></Route>
         <Route path='/about-us' element={<AboutUsPage />}></Route>
         <Route path='/cart-page' element={<CartPage />}></Route>
+        <Route path='/cre-Acc' element={<CreAcc />}></Route>
 
       </Routes>
     </div>
