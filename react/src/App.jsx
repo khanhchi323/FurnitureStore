@@ -10,6 +10,7 @@ import ProductDetailPage from "./views/public/ProductDetailPage";
 import AboutUsPage from "./views/public/AboutUsPage"
 import CartPage from "./views/public/CartPage"
 import CreAcc from "./views/public/CreAcc";
+import OrderDetail from "./views/public/OrderDetail"
 export default function App() {
 
   return (
@@ -25,7 +26,7 @@ export default function App() {
         <Route path='/about-us' element={<AboutUsPage />}></Route>
         <Route path='/cart-page' element={<CartPage />}></Route>
         <Route path='/cre-Acc' element={<CreAcc />}></Route>
-
+        <Route path='/order-detail' element={<OrderDetail />}></Route>
       </Routes>
     </div>
   );

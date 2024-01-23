@@ -11,8 +11,8 @@ const categories = [
 ];
 
 const CategoryCard = ({ category }) => (
-  <div className="flex flex-col items-center m-4 bg-white rounded-lg shadow-md w-32 h-32">
-    <img className="w-full h-full rounded-t-lg object-cover" src={category.imageUrl} alt={category.name} />
+  <div className="flex flex-col items-center m-4 bg-white rounded-lg shadow-md w-full h-40">
+    <img className="w-40 h-full rounded-t-lg object-cover" src={category.imageUrl} alt={category.name} />
     <div className="p-2">
       <h2 className="font-bold">{category.name}</h2>
     </div>
