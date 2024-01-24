@@ -10,7 +10,7 @@ import ProductDetailPage from "./views/public/ProductDetailPage";
 import AboutUsPage from "./views/public/AboutUsPage"
 import CartPage from "./views/public/CartPage"
 import EditAddress from "./views/public/EditAddress";
-import OrderDetail from "./views/public/OrderDetail"
+import ComfirmationOrder from "./views/public/ComfirmationOrder"
 import PaymentMethods from "./views/public/PaymentMethods";
 import OrderHistory from "./views/public/OrderHistory";
 export default function App() {
@@ -28,7 +28,7 @@ export default function App() {
         <Route path='/about-us' element={<AboutUsPage />}></Route>
         <Route path='/cart-page' element={<CartPage />}></Route>
         <Route path='/cre-add' element={<EditAddress />}></Route>
-        <Route path='/order-detail' element={<OrderDetail />}></Route>
+        <Route path='/confirmation-order' element={<ComfirmationOrder />}></Route>
         <Route path='/payment-methods' element={<PaymentMethods />}></Route>
         <Route path='/order-history' element={<OrderHistory />}></Route>
       </Routes>
