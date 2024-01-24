@@ -12,6 +12,7 @@ import CartPage from "./views/public/CartPage"
 import EditAddress from "./views/public/EditAddress";
 import OrderDetail from "./views/public/OrderDetail"
 import PaymentMethods from "./views/public/PaymentMethods";
+import OrderHistory from "./views/public/OrderHistory";
 export default function App() {
 
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <Route path='/cre-add' element={<EditAddress />}></Route>
         <Route path='/order-detail' element={<OrderDetail />}></Route>
         <Route path='/payment-methods' element={<PaymentMethods />}></Route>
+        <Route path='/order-history' element={<OrderHistory />}></Route>
       </Routes>
     </div>
   );
