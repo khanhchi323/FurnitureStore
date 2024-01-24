@@ -1,5 +1,5 @@
 import React from "react";
-export default function CreAcc() {
+export default function EditAddress() {
     return (
         <div className="font-sans m-0 p-0 h-full px-8 flex items-center justify-center bg-gray-100">
             <div className="lg:w-1/2 md:w-1/2 sm:w-3/4 shadow-2xl p-4 my-2 bg-white ">
