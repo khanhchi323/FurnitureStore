@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function OrderDetail() {
+export default function ComfirmationOrder() {
     return (
         <div className="bg-white">
             <div className="mb-8">
@@ -13,10 +13,10 @@ export default function OrderDetail() {
                     <span className="font-semibold text-black-600">Confirmation</span>
                 </nav>
             </div>
-        <div className="container mx-auto px-4 sm:px-6 w-1/3 lg:px-8 py-12 shadow-2xl">
+        <div className="container mx-auto px-4 sm:px-6 w-1/2 lg:px-8 py-12 shadow-2xl">
             
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                <button className="mt-4 bg-gray-500 text-white px-6 py-2 rounded mb-8">View Invoice</button>
+                <button className="mt-4 bg-gray-300 text-black px-6 py-2 rounded mb-8">View Invoice</button>
               </div>
             <div className="text-center">
                 <h2 className="text-2xl font-semibold">We received your order!</h2>
@@ -66,6 +66,10 @@ export default function OrderDetail() {
                 <p> Total</p>
                 <p> $519</p>
             </div>
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <button className="mt-8 bg-gray-300 text-black px-6 py-2 rounded mb-2">Continue Shopping</button>
+              </div>
+
         </div>
         </div>
     );
