@@ -30,7 +30,7 @@ export default function App() {
         <Route path='/cre-add' element={<EditAddress />}></Route>
         <Route path='/confirmation-order' element={<ComfirmationOrder />}></Route>
         <Route path='/payment-methods' element={<PaymentMethods />}></Route>
-        <Route path='/contact-us' element={<ContactUs />}></Route>
+        <Route path='/contactus' element={<ContactUs />}></Route>
       </Routes>
     </div>
   );

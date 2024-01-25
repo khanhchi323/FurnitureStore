@@ -14,17 +14,21 @@ return new class extends Migration
         Schema::create('product',function(Blueprint $table){
             $table->bigIncrements('product_id');
             $table->unsignedBigInteger('discount_id');
-            $table->unsignedBigInteger('product_category_id');
             $table->unsignedBigInteger('product_status_id');
+            $table->unsignedBigInteger('product_category_id');
             $table->string('product_name',50);
-            $table->string('decription',500);
+            $table->string('description',500);
+            $table->string('image');
+            $table->string('quantity',6);
             $table->decimal('price',11,2);
             $table->timestamps();
             $table->softDeletes();
 
+            //khoa ngoai
             $table->foreign('discount_id')->references('discount_id')->on('discount')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('product_category_id')->references('product_category_id')->on('product_category')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('product_status_id')->references('product_status_id')->on('product_status')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('product_category_id')->references('product_category_id')->on('product_category')->onDelete('cascade')->onUpdate('cascade');
+
         });
     }
 
@@ -33,7 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('product');
-
+        //
     }
 };
