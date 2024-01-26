@@ -12,7 +12,7 @@ import CartPage from "./views/public/CartPage"
 import EditAddress from "./views/public/EditAddress";
 import ComfirmationOrder from "./views/public/ComfirmationOrder"
 import PaymentMethods from "./views/public/PaymentMethods";
-import OrderHistory from "./views/public/OrderHistory";
+import ContactUs from "./views/public/ContactUs";
 export default function App() {
 
   return (
@@ -30,7 +30,7 @@ export default function App() {
         <Route path='/cre-add' element={<EditAddress />}></Route>
         <Route path='/confirmation-order' element={<ComfirmationOrder />}></Route>
         <Route path='/payment-methods' element={<PaymentMethods />}></Route>
-        <Route path='/order-history' element={<OrderHistory />}></Route>
+        <Route path='/contactus' element={<ContactUs />}></Route>
       </Routes>
     </div>
   );
