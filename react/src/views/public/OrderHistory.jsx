@@ -17,7 +17,7 @@ export default function OrderHistory() {
                     </div>
                     <p className="text-sm text-gray-600 truncate">Order Status: <b className="text-black">Waiting for Shipping</b></p>
                 </div>
-                <div className="bg-gray-400 h-px my-2"></div>
+                <div className="bg-gray-400 h-px mt-2 mb-4"></div>
                 <div className="flex ">
                     <img src={Cabinet} alt="product-img" className=" md:w-1/6" />
                     <div className="text-xs md:text-base mx-3 mt-2">
@@ -26,7 +26,7 @@ export default function OrderHistory() {
                         <br />
                         <p className="text-gray-800">1.599.000đ</p>
                     </div>
-                    <div className="text-xs flex flex-col ml-12 sm:block  sm:text-right sm:self-center w-full mt-2 text-gray-600">
+                    <div className="text-xs flex flex-col ml-12 md:ml-4 sm:block  sm:text-right sm:self-center w-full mt-2 text-gray-600">
                         <button className="sm:mr-8 text-left">View Product</button>
                         <button className="truncate mt-2 text-left">Similar Product</button>
                     </div>
@@ -39,13 +39,13 @@ export default function OrderHistory() {
                         <br />
                         <p className="text-gray-800">1.599.000đ</p>
                     </div>
-                    <div className="text-xs flex flex-col ml-12 sm:block  sm:text-right sm:self-center w-full mt-2 text-gray-600">
+                    <div className="text-xs flex flex-col ml-12 md:ml-4 sm:block  sm:text-right sm:self-center w-full mt-2 text-gray-600">
                         <button className="sm:mr-8 text-left">View Product</button>
                         <button className="truncate mt-2 text-left">Similar Product</button>
                     </div>
                 </div>
                 <div className="md:w-1/4 ml-auto text-right">
-                    <button className="  border border-gray-500 border-2 rounded p-1">View Invoice</button>
+                    <button className="text-sm font-bold   border border-gray-500 border-2 rounded p-1">View Invoice</button>
                 </div>
                 <div className="lg:flex w-full mt-4">
                     <div className="flex">
@@ -54,7 +54,7 @@ export default function OrderHistory() {
                     </div>
                     <p className="text-sm text-gray-600 truncate">Order Status: <b className="text-black">Waiting for Shipping</b></p>
                 </div>
-                <div className="bg-gray-400 h-px mb-8 mt-2"></div>
+                <div className="bg-gray-400 h-px mb-4 mt-2"></div>
                 <div className="flex ">
                     <img src={Cabinet} alt="product-img" className=" md:w-1/6" />
                     <div className="text-xs md:text-base mx-3 mt-2">
@@ -63,7 +63,7 @@ export default function OrderHistory() {
                         <br />
                         <p className="text-gray-800">1.599.000đ</p>
                     </div>
-                    <div className="text-xs flex flex-col ml-12 sm:block  sm:text-right sm:self-center w-full mt-2 text-gray-600">
+                    <div className="text-xs flex flex-col ml-12 md:ml-4 sm:block  sm:text-right sm:self-center w-full mt-2 text-gray-600">
                         <button className="sm:mr-8 text-left">View Product</button>
                         <button className="truncate mt-2 text-left">Similar Product</button>
                     </div>
@@ -74,15 +74,15 @@ export default function OrderHistory() {
                         <b className="md:text-lg">Cabinet</b>
                         <p className="text-gray-600">Grey</p>
                         <br />
-                        <p className="text-gray-800">1.599.000đ</p>
+                        <p className="text-gray-800">1.599.000đ</p> 
                     </div>
-                    <div className="text-xs flex flex-col ml-12 sm:block  sm:text-right sm:self-center w-full mt-2 text-gray-600">
+                    <div className="text-xs flex flex-col ml-12 md:ml-4 sm:block  sm:text-right sm:self-center w-full mt-2 text-gray-600">
                         <button className="sm:mr-8 text-left">View Product</button>
                         <button className="truncate mt-2 text-left">Similar Product</button>
                     </div>
                 </div>
                 <div className=" ml-auto text-right">
-                    <button className="  border border-gray-500 border-2 rounded p-1">View Invoice</button>
+                    <button className="text-sm font-bold border border-gray-500 border-2 rounded p-1">View Invoice</button>
                 </div>
                 <div className="bg-gray-400 h-px mb-8 mt-4"></div>
             </div>
