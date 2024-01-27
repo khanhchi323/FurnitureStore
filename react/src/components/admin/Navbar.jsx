@@ -10,7 +10,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-8">
                 <Badge className=" shadow-none" content="3">
-                    <IconButton  color = "white" size = "circular">
+                    <IconButton  color = "white">
                         <ChatBubbleOvalLeftEllipsisIcon className="h-4 w-4" />
                     </IconButton>
                 </Badge>
