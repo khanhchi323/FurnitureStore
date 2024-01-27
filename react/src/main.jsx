@@ -1,15 +1,75 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom';
-import './index.css'
-import App from './App';
-import MenuBar from './components/public/MenuBar';
-import Footer from './components/public/footer';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Outlet, Routes, Route } from "react-router-dom";
+import "./index.css";
+import MenuBar from "./components/public/MenuBar";
+import HomePage from "./views/public/HomePage";
+import Footer from "./components/public/footer";
+import LoginPage from "./views/public/LoginPage";
+import RegisterPage from "./views/public/RegisterPage";
+import ProfilePage from "./views/public/ProfilePage";
+import EditProfilePage from "./views/public/EditProfilePage";
+import ProductPage from "./views/public/ProductPage";
+import ProductDetailPage from "./views/public/ProductDetailPage";
+import AboutUsPage from "./views/public/AboutUsPage"
+import CartPage from "./views/public/CartPage"
+import EditAddress from "./views/public/EditAddress";
+import ComfirmationOrder from "./views/public/ComfirmationOrder"
+import PaymentMethods from "./views/public/PaymentMethods";
+import ContactUs from "./views/public/ContactUs";
+import OrderHistory from "./views/public/OrderHistory";
+import Error404 from "./views/public/Error404";
+import SideBar from "./components/admin/SideBar";
+import { Navbar } from "@material-tailwind/react";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-  <MenuBar/>
-    <App />
-    <Footer/>
-  </BrowserRouter>,
+const User = () => {
+    return (
+        <div>
+            <MenuBar />
+            <Outlet />
+            <Footer />
+        </div>
+    );
+};
+
+const Admin = () => {
+    return <div>
+    <Navbar/>
+      <SideBar/>
+    </div>;
+};
+ReactDOM.createRoot(document.getElementById("root")).render(
+    
+            <BrowserRouter>
+                <Routes>
+                    {/* ERROR 404 */}
+                    <Route path="*" element={<Error404 />} />
+
+                    {/* PUBLIC */}
+                    <Route path="/" element={<User />}>
+                        <Route index element={<HomePage />} />
+                        <Route path="/login" element={<LoginPage />} />
+                        <Route path="/register" element={<RegisterPage />} />
+                        <Route path="/profile" element={<ProfilePage />} />
+                        <Route path="/edit-profile" element={<EditProfilePage />}/>
+                        <Route path="/product" element={<ProductPage />} />
+                        <Route path="/product-detail" element={<ProductDetailPage />} />
+                        <Route path="/about-us" element={<AboutUsPage />} />
+                        <Route path="/cart-page" element={<CartPage />} />
+                        <Route path="/cre-add" element={<EditAddress />} />
+                        <Route path="/confirmation-order"element={<ComfirmationOrder />}/>
+                        <Route path="/contactus" element={<ContactUs />} />
+                        <Route path="/order-history" element={<OrderHistory />}/>
+                        
+                    </Route>
+
+                    <Route  path="/admin" element={<Admin/>}>
+                    
+
+                    </Route>
+                </Routes>
+
+                
+            </BrowserRouter>
+
 );
