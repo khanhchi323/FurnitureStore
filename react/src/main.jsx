@@ -20,7 +20,7 @@ import ContactUs from "./views/public/ContactUs";
 import OrderHistory from "./views/public/OrderHistory";
 import Error404 from "./views/public/Error404";
 import SideBar from "./components/admin/SideBar";
-import { Navbar } from "@material-tailwind/react";
+import Nav from "./components/admin/Navbar"
 
 const User = () => {
     return (
@@ -34,8 +34,8 @@ const User = () => {
 
 const Admin = () => {
     return <div>
-    <Navbar/>
-      <SideBar/>
+    <Nav/>
+      {/* <SideBar/> */}
     </div>;
 };
 ReactDOM.createRoot(document.getElementById("root")).render(
