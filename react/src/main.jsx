@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Outlet, Routes, Route } from "react-router-dom";
-import "./index.css";
+import {
+    BrowserRouter,
+    Outlet,
+    Routes,
+    Route,
+    Switch,
+    Redirect,
+} from "react-router-dom";
 import MenuBar from "./components/public/MenuBar";
 import HomePage from "./views/public/HomePage";
 import Footer from "./components/public/footer";
@@ -21,6 +27,8 @@ import OrderHistory from "./views/public/OrderHistory";
 import Error404 from "./views/public/Error404";
 import SideBar from "./components/admin/SideBar";
 import Navbar from "./components/admin/Navbar";
+import BarChart from "./components/admin/BarChart";
+import LineChart from "./components/admin/LineChart";
 
 const User = () => {
     return (
@@ -44,7 +52,7 @@ const Admin = () => {
                 <div className="hidden md:block md:w-auto static left-0 bottom-0">
                     <SideBar />
                 </div>
-                <Outlet/>
+                <Outlet />
             </div>
         </div>
     );
@@ -75,7 +83,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/order-history" element={<OrderHistory />} />
             </Route>
 
-            <Route path="/admin" element={<Admin />}></Route>
+            <Route path="/admin" element={<Admin />}>
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/bar-chart" element={<BarChart />} />
+                <Route path="/line-chart" element={<LineChart />} />
+            </Route>
         </Routes>
     </BrowserRouter>
 );
