@@ -16,9 +16,9 @@ return new class extends Migration
             $table->unsignedBigInteger('discount_id');
             $table->unsignedBigInteger('product_status_id');
             $table->unsignedBigInteger('product_category_id');
+            $table->unsignedBigInteger('color_id');
             $table->string('product_name',50);
             $table->string('description',500);
-            $table->string('color',50);
             $table->string('image');
             $table->string('quantity',6);
             $table->decimal('price',11,2);
@@ -29,7 +29,7 @@ return new class extends Migration
             $table->foreign('discount_id')->references('discount_id')->on('discount')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('product_status_id')->references('product_status_id')->on('product_status')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('product_category_id')->references('product_category_id')->on('product_category')->onDelete('cascade')->onUpdate('cascade');
-
+            $table->foreign('color_id')->references('color_id')->on('color')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
