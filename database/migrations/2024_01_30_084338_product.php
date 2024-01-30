@@ -32,6 +32,7 @@ return new class extends Migration
             $table->foreign('color_id')->references('color_id')->on('color')->onDelete('cascade')->onUpdate('cascade');
         });
     }
+    
 
     /**
      * Reverse the migrations.
