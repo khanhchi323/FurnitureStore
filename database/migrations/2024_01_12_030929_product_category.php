@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('product_category', function(Blueprint $table){
             $table->BigIncrements('product_category_id');
             $table->string('product_category_name', 50);
-            $table->text('description');
-            $table->string('icon', 50);
+            $table->string('image', 50);
             $table->timestamps();
             $table->softDeletes();
         });

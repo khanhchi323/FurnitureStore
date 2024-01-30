@@ -105,8 +105,7 @@ class ProductCategoryController extends Controller
         }
         $ProductCategory->product_category_id = $input['product_category_id'] ?? null;
         $ProductCategory->product_category_name = $input['product_category_name'] ?? null;
-        $ProductCategory->description = $input['description'] ?? null;
-        $ProductCategory->icon = $input['icon'] ?? null;
+        $ProductCategory->icon = $input['image'] ?? null;
         $ProductCategory->save();
 
         $arr = [
