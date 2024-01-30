@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('product_category_id');
             $table->string('product_name',50);
             $table->string('description',500);
+            $table->string('color',50);
             $table->string('image');
             $table->string('quantity',6);
             $table->decimal('price',11,2);
