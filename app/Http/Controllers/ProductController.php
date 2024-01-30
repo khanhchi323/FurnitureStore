@@ -133,6 +133,7 @@ class ProductController extends Controller
         $product->product_status_id = $input['product_status_id'] ?? null;
         $product->discount_id = $input['discount_id'] ?? null;
         $product->quantity = $input['quantity'] ?? null;
+        $product->color = $input['color'] ?? null;
         $product->image = $input['image'] ?? null;
         $product->save();
 
