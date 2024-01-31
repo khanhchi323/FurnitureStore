@@ -1,8 +1,8 @@
 import React from "react";
-import Cabinet from "../../assets/product/cabinet/cabinet.svg"
-import Chair from "../../assets/product/chair/chair.svg"
-import Sofa from "../../assets/product/chair/sofa.svg"
-import Table from "../../assets/product/table/table.svg"
+import Cabinet from "../../assets/public/CateProduct/cabinet.svg"
+import Chair from "../../assets/public/CateProduct/chair.svg"
+import Sofa from "../../assets/public/CateProduct/sofa.svg"
+import Table from "../../assets/public/CateProduct/table.svg"
 
 export default function CartPage() {
     return (

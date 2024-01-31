@@ -1,6 +1,6 @@
 import React from "react";
-import Cabinet from "../../assets/product/cabinet/cabinet.svg"
-import Chair from "../../assets/product/chair/chair.svg"
+import Cabinet from "../../assets/public/CateProduct/cabinet.svg"
+import Chair from "../../assets/public/CateProduct/chair.svg"
 
 export default function OrderHistory() {
     return (

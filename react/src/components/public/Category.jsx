@@ -87,8 +87,7 @@ const Category = () => {
                                                             </h2>
                                                             <div className="flex h-full items-end pb-6">
                                                                 <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">
-                                                                    Minimal
-                                                                    Interior
+                                                                    [data.product_category_name]
                                                                 </h3>
                                                             </div>
                                                         </div>
