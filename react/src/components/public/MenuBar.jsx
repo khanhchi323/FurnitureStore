@@ -126,7 +126,7 @@ function ProfileMenu() {
 // nav list menu
 const navListMenuItems = [
     {
-        title: "@material-tailwind/html",
+        title: "",
         description:
             "Learn how to use @material-tailwind/html, packed with rich components and widgets.",
     },

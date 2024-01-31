@@ -33,16 +33,6 @@ Route::prefix('product')->group(function () {
   Route::post('product-update/{product_id}',[ProductController::class,'update']);
 });
 
-//Discount
-Route::prefix('discount')->group(function () {
-  Route::get('discount-list',[DiscountController::class,'DiscountList']);
-  Route::post('discount-create',[DiscountController::class,'store']);
-  Route::get('discount-show/{discount_id}',[DiscountController::class,'show']);
-  Route::post('discount-delete/{discount_id}',[DiscountController::class,'destroy']);
-  Route::post('discount-update/{discount_id}',[DiscountController::class,'update']);
- 
-
-});
 
 //ProductCategory
 Route::prefix('product_category')->group(function () {

@@ -74,6 +74,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/cart-page" element={<CartPage />} />
                 <Route path="/cre-add" element={<EditAddress />} />
+                <Route path="/payment-method" element={<EditAddress />} />
                 <Route
                     path="/confirmation-order"
                     element={<ComfirmationOrder />}

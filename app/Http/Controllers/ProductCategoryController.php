@@ -12,18 +12,19 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ProductCategoryController extends Controller
 {
- public function ProductCategoryList(){
-    $ProductCategoryList=ProductCategory::all();
-    $arr=[
-        'status'=>200,
-        'message'=>'Danh sách sản phẩm của cửa hàng',
-        'data'=>ProductCategoryResources::collection($ProductCategoryList)
-    ];
-    return response()->json($arr,200);
- }  
- 
+    public function ProductCategoryList()
+    {
+        $ProductCategoryList = ProductCategory::all();
+        $arr = [
+            'status' => 200,
+            'message' => 'Danh sách sản phẩm của cửa hàng',
+            'data' => $ProductCategoryList
+        ];
+        return response()->json($arr, 200);
+    }
 
-//Tạo mới
+
+    //Tạo mới
     public function store(Request $request)
     {
         $input = $request->all();
@@ -48,7 +49,7 @@ class ProductCategoryController extends Controller
         return response()->json($arr, 201);
     }
 
-//Xóa
+    //Xóa
     public function destroy(string $id)
     {
         try {
@@ -73,14 +74,14 @@ class ProductCategoryController extends Controller
         }
     }
 
-//Cập nhật 
+    //Cập nhật 
     public function update(Request $request, string $ProductCategory)
     {
         $input = $request->all();
 
         $validator = Validator::make($input, [
             'product_category_name' => 'required',
-           
+
 
         ]);
 
@@ -117,6 +118,3 @@ class ProductCategoryController extends Controller
         return response()->json($arr, 200);
     }
 }
-
-
-
