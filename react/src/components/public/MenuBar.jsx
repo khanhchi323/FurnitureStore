@@ -126,7 +126,7 @@ function ProfileMenu() {
 // nav list menu
 const navListMenuItems = [
     {
-        title: "@material-tailwind/html",
+        title: "",
         description:
             "Learn how to use @material-tailwind/html, packed with rich components and widgets.",
     },
@@ -165,6 +165,25 @@ function NavListMenu() {
     return (
         <React.Fragment>
             <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
+                <MenuHandler>
+                    <Typography
+                        as="a"
+                        href="#"
+                        variant="small"
+                        className="font-normal"
+                    >
+                        <MenuItem className="hidden items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full">
+                            <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
+                            Pages{" "}
+                            <ChevronDownIcon
+                                strokeWidth={2}
+                                className={`h-3 w-3 transition-transform ${
+                                    isMenuOpen ? "rotate-180" : ""
+                                }`}
+                            />
+                        </MenuItem>
+                    </Typography>
+                </MenuHandler>
                 <MenuList className="hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid">
                     <Card
                         color="blue"
@@ -253,11 +272,16 @@ export default function MenuBar() {
     return (
         <Navbar className="mx-auto max-w-screen-3xl p-2 lg:rounded-xl lg:pl-6">
             <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
-                <Link to="/">
-                    <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-medium">
+                <Link>
+                    <Typography
+                        as="a"
+                        href="#"
+                        className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+                    >
                         CCHLB
                     </Typography>
                 </Link>
+
                 <div className="hidden lg:block">
                     <NavList />
                 </div>
@@ -271,27 +295,9 @@ export default function MenuBar() {
                     <Bars2Icon className="h-6 w-6" />
                 </IconButton>
 
-                <div className="w-72 ml-2">
-                    <Input
-                        label="Search..."
-                        icon={
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="w-6 h-6"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                                />
-                            </svg>
-                        }
-                    />
-                </div>
+                <Button size="sm" variant="text">
+                    <span>Log In</span>
+                </Button>
                 <ProfileMenu />
             </div>
             <Collapse open={isNavOpen} className="overflow-scroll">

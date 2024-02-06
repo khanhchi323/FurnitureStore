@@ -3,11 +3,17 @@ import Img1 from "../../assets/public/imgbg/img1.jpg";
 
 export default function AboutUs() {
     return (
-        <div className="flex justify-between m-10 md:flex-row ">
-            <div className="px-10" data-jarallax-element="50">
-                <img src={Img1} alt="Image" className="img-fluid rounded" />
+        <div className="sm:flex items-center max-w-screen-xl ">
+            <div className="sm:w-1/2 p-10">
+                <div className ="object-center text-center">
+                    <img
+                        src={Img1}
+                        alt="Image"
+                        className="img-fluid rounded image "
+                    />
+                </div>
             </div>
-            <div className="col-md-6 order-md-1" data-jarallax-element="-50">
+            <div className=" md:w-1/2 p-5">
                 <div className="row">
                     <div className="col-12">
                         <div className="text-left pb-6">
@@ -16,12 +22,10 @@ export default function AboutUs() {
                     </div>
                     <div className=" ">
                         <p className="pr-10 ">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Eveniet incidunt magnam corrupti, odit eos
-                            harum quaerat nostrum voluptatibus aspernatur
-                            eligendi accusantium cum, impedit blanditiis
-                            voluptate commodi doloribus, nemo dignissimos
-                            recusandae.
+                            CCHLB Furniture tự hào là đơn vị cung cấp đồ nội
+                            thất cao cấp, hiện đại, phong phú, đa dạng mẫu mã
+                            được xuất khẩu đi các nước Châu Âu và các thị trường
+                            khó tính nhất.
                         </p>
                     </div>
 
