@@ -15,7 +15,7 @@ return new class extends Migration
             $table->bigIncrements('order_id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('order_status');
-            $table->string('shipping_metod');
+            $table->string('shipping_method');
             $table->decimal('total',11,2);
             $table->timestamps();
 
