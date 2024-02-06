@@ -11,10 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('color', function(Blueprint $table){
-            $table->BigIncrements('color_id');
+        Schema::create('payment', function(Blueprint $table){
+            $table->bigIncrements('payment_id');
+            $table->unsignedBigInteger('order_id');
             $table->string('name');
+            $table->string('total');
+
+            //khoa ngoai
+            $table->foreign('order_id')->references('order_id')->on('order')->onDelete('cascade')->onUpdate('cascade');
         });
+        
+
     }
 
     /**
@@ -22,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExits('payment');
     }
 };
