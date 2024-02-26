@@ -29,7 +29,7 @@ export default function AboutUs() {
                         </p>
                     </div>
 
-                    <div className=" flex justify-between">
+                    <div className=" flex justify-between md:flex-col">
                         <div className="col-md-12 mb-md-5 mb-0 col-lg-6">
                             <div className="pr-20">
                                 <div className="unit-4-icon mr-4 mb-3">

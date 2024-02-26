@@ -34,24 +34,24 @@ export default function OurTeam() {
                             </p>
                             <ul className="ul-social-circle">
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-facebook"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-twitter"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-linkedin"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-instagram"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -80,24 +80,24 @@ export default function OurTeam() {
                             </p>
                             <ul className="ul-social-circle">
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-facebook"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-twitter"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-linkedin"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-instagram"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -126,24 +126,24 @@ export default function OurTeam() {
                             </p>
                             <ul className="ul-social-circle">
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-facebook"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-twitter"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-linkedin"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-instagram"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

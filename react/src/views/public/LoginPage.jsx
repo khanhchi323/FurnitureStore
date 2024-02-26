@@ -50,7 +50,7 @@ export default function LogInForm() {
                     </div>
                     <div className="pt-3 pb-3 text-center shadow.md">
                         Already have an account?{" "}
-                        <Link to="" className=" text-green-800" href="/login">
+                        <Link to="/login" className=" text-green-800">
                             Register
                         </Link>
                     </div>

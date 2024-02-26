@@ -6,10 +6,10 @@ export default function ComfirmationOrder() {
         <div className="bg-white">
             <div className="mb-8">
                 <nav className="flex space-x-4 justify-center mt-6">
-                    <a href="#" className="text-gray-500">Cart </a>
-                    <a href="#" className="text-gray-500">Personal Information</a>
-                    <a href="#" className="text-gray-500">Shipping Address</a>
-                    <a href="#" className="text-gray-500">Payment Method</a>
+                    <a  className="text-gray-500">Cart </a>
+                    <a  className="text-gray-500">Personal Information</a>
+                    <a  className="text-gray-500">Shipping Address</a>
+                    <a  className="text-gray-500">Payment Method</a>
                     <span className="font-semibold text-black-600">Confirmation</span>
                 </nav>
             </div>

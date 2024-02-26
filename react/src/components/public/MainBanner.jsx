@@ -2,10 +2,7 @@ import { Carousel } from "@material-tailwind/react";
 
 import sale3 from "../../assets/public/banner/intro1.jpg"
 import sale4 from "../../assets/public/banner/intro2.jpg"
-// import sale5 from "../../assets/public/banner/sale5.png"
-// import sale6 from "../../assets/public/banner/sale6.png"
-// import sale7 from "../../assets/public/banner/sale7.png"
-// import sale8 from "../../assets/public/banner/sale8.png"
+
 
 export default function MainBanner() {
     const imagePaths = [sale3, sale4];

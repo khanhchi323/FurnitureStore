@@ -146,7 +146,7 @@ function NavListMenu() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     const renderItems = navListMenuItems.map(({ title, description }) => (
-        <a href="#" key={title}>
+        <Link key={title}>
             <MenuItem>
                 <Typography variant="h6" color="blue-gray" className="mb-1">
                     {title}
@@ -159,7 +159,7 @@ function NavListMenu() {
                     {description}
                 </Typography>
             </MenuItem>
-        </a>
+        </Link>
     ));
 
     return (
@@ -168,7 +168,7 @@ function NavListMenu() {
                 <MenuHandler>
                     <Typography
                         as="a"
-                        href="#"
+                    
                         variant="small"
                         className="font-normal"
                     >
@@ -275,7 +275,7 @@ export default function MenuBar() {
                 <Link>
                     <Typography
                         as="a"
-                        href="#"
+                    
                         className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
                     >
                         CCHLB
