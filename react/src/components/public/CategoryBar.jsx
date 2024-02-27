@@ -18,18 +18,18 @@
     import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 
     const sortOptions = [
-        { name: 'Most Popular', href: '#', current: true },
-        { name: 'Best Rating', href: '#', current: false },
-        { name: 'Newest', href: '#', current: false },
-        { name: 'Price: Low to High', href: '#', current: false },
-        { name: 'Price: High to Low', href: '#', current: false },
+        { name: 'Most Popular', current: true },
+        { name: 'Best Rating', current: false },
+        { name: 'Newest', current: false },
+        { name: 'Price: Low to High', current: false },
+        { name: 'Price: High to Low', current: false },
     ]
     const subCategories = [
-        { name: 'Totes', href: '#' },
-        { name: 'Backpacks', href: '#' },
-        { name: 'Travel Bags', href: '#' },
-        { name: 'Hip Bags', href: '#' },
-        { name: 'Laptop Sleeves', href: '#' },
+        { name: 'Totes' },
+        { name: 'Backpacks' },
+        { name: 'Travel Bags' },
+        { name: 'Hip Bags' },
+        { name: 'Laptop Sleeves' },
     ]
     const filters = [
         {

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import Person2 from "../../assets/public/imgbg/person2.jpg";
 import Person3 from "../../assets/public/imgbg/person3.jpg";
 import Person4 from "../../assets/public/imgbg/person4.jpg";
@@ -34,24 +35,24 @@ export default function OurTeam() {
                             </p>
                             <ul className="ul-social-circle">
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-facebook"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-twitter"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-linkedin"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-instagram"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -80,24 +81,24 @@ export default function OurTeam() {
                             </p>
                             <ul className="ul-social-circle">
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-facebook"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-twitter"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-linkedin"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-instagram"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -126,24 +127,24 @@ export default function OurTeam() {
                             </p>
                             <ul className="ul-social-circle">
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-facebook"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-twitter"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-linkedin"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <Link>
                                         <span className="icon-instagram"></span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

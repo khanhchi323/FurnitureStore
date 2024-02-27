@@ -28,6 +28,7 @@ const Category = () => {
     };
 
     console.log(data);
+    
     return (
         <div className="container mx-auto">
             <div className="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">

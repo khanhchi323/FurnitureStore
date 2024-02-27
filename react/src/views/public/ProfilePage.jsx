@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom"
+
 export default function ProfilePage() {
     return (
         <div className="font-sans m-0 p-0 min-h-screen bg-cover bg-no-repeat">
@@ -13,7 +15,7 @@ export default function ProfilePage() {
                         </div>
                         <h2 className="text-4xl m-2.5 mb-2">Đừu Mạnh Lam</h2>
                         <h3 className="text-xl m-2.5 mt-1.5 text-slate-600">Hồ Chí Minh - Việt Nam</h3>
-                        <a href="./EditProfile" className="bg-teal-800 text-white px-3 py-1 mt-3 text-lg cursor-pointer rounded-full hover:bg-green-700">Edit Profile</a>
+                        <Link to ="/EditProfile" className="bg-teal-800 text-white px-3 py-1 mt-3 text-lg cursor-pointer rounded-full hover:bg-green-700">Edit Profile</Link>
 
                         <div className="h-0.5 w-6/7 bg-slate-400 mt-3 mx-auto"></div>
 
