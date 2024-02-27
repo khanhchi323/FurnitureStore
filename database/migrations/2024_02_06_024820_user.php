@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('user', function(Blueprint $table){
             $table->bigIncrements('user_id');
-            $table->unsignedBigInteger('role');
+            $table->string('role');
             $table->string('username',25);
             $table->string('password',100);
             $table->string('email',50);
