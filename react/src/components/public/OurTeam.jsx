@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import Person2 from "../../assets/public/imgbg/person2.jpg";
 import Person3 from "../../assets/public/imgbg/person3.jpg";
 import Person4 from "../../assets/public/imgbg/person4.jpg";

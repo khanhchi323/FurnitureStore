@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom"
+
 export default function ProfilePage() {
     return (
         <div className="font-sans m-0 p-0 min-h-screen bg-cover bg-no-repeat">
