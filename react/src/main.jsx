@@ -26,7 +26,7 @@ import ContactUs from "./views/public/ContactUs";
 import OrderHistory from "./views/public/OrderHistory";
 import Error404 from "./views/public/Error404";
 import SideBar from "./components/admin/SideBar";
-import Navbar from "./components/admin/Navbar";
+// import Navbar from "./components/admin/Navbar";
 
 
 const User = () => {
@@ -43,9 +43,9 @@ const Admin = () => {
     return (
         <div className="flex flex-col h-screen relative ">
             <div className="fixed bg-gray-100 w-full h-full -z-10"></div>
-            <div className=" top-0 z-10 ">
+            {/* <div className=" top-0 z-10 ">
                 <Navbar />
-            </div>
+            </div> */}
 
             <div className="flex flex-grow md:flex-row pr-2">
                 <div className="hidden md:block md:w-auto static left-0 bottom-0">
