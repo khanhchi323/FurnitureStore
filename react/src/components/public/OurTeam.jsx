@@ -1,10 +1,22 @@
 import React from "react";
-import {Link} from "react-router-dom"
-import Person2 from "../../assets/public/imgbg/person2.jpg";
-import Person3 from "../../assets/public/imgbg/person3.jpg";
-import Person4 from "../../assets/public/imgbg/person4.jpg";
+import { Link } from "react-router-dom";
+import HH from "../../assets/public/imgbg/HH.png";
+import KC from "../../assets/public/imgbg/KC.jpg";
+import ML from "../../assets/public/imgbg/ML.png";
+import NC from "../../assets/public/imgbg/NC.png";
+import DB from "../../assets/public/imgbg/DB.png";
 
 export default function OurTeam() {
+    const TeamList = () => {
+        const teams = [
+            {name: 'Phan Hà', position: ' development', image:'../../assets/public/imgbg/HH.png', description: ''},
+            {name: 'Khánh Chi', position:  'development', image:'../../assets/public/imgbg/KC.jpg'},
+            {name: 'Mạnh Lưu', position: ' development', image:'../../assets/public/imgbg/ML.png'},
+            {name: 'Nguyên Chương', position: 'development', image:'../../assets/public/imgbg/NC.png'},
+            {name: 'Dương Băng', position: 'development', image:'../../assets/public/imgbg/DB.png'},
+
+        ];
+    }
     return (
         <div className=" " id="team-section">
             <div className="m-14">
@@ -17,7 +29,7 @@ export default function OurTeam() {
                     <div className="" data-aos="fade" data-aos-delay="100">
                         <div className="person text-center bg-white p-4">
                             <img
-                                src={Person4}
+                                src={HH}
                                 alt="Image"
                                 className="img-fluid rounded-circle mb-3 w-80"
                             />
@@ -33,37 +45,19 @@ export default function OurTeam() {
                                 cupiditate tempore suscipit inventore deserunt
                                 tenetur.
                             </p>
-                            <ul className="ul-social-circle">
-                                <li>
-                                    <Link>
-                                        <span className="icon-facebook"></span>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link>
-                                        <span className="icon-twitter"></span>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link>
-                                        <span className="icon-linkedin"></span>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link>
-                                        <span className="icon-instagram"></span>
-                                    </Link>
-                                </li>
-                            </ul>
+                            
                         </div>
                     </div>
+
+                    
                     <div
                         className="col-md-6 col-lg-4 mb-5 mb-lg-0"
                         data-aos="fade"
-                        data-aos-delay="200">
+                        data-aos-delay="200"
+                    >
                         <div className="person text-center bg-white p-4">
                             <img
-                                src={Person3}
+                                src={KC}
                                 alt="Image"
                                 className="img-fluid rounded-circle mb-3"
                             />
@@ -106,10 +100,105 @@ export default function OurTeam() {
                     <div
                         className="col-md-6 col-lg-4 mb-5 mb-lg-0"
                         data-aos="fade"
-                        data-aos-delay="200">
+                        data-aos-delay="200"
+                    >
                         <div className="person text-center bg-white p-4">
                             <img
-                                src={Person4}
+                                src={ML}
+                                alt="Image"
+                                className="img-fluid rounded-circle mb-3"
+                            />
+                            <h3>Tom Sharp</h3>
+                            <p className="position text-muted">
+                                Co-Founder, COO
+                            </p>
+                            <p className="mb-4">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Nisi at consequatur unde
+                                molestiae quidem provident voluptatum deleniti
+                                quo iste error eos est praesentium distinctio
+                                cupiditate tempore suscipit inventore deserunt
+                                tenetur.
+                            </p>
+                            <ul className="ul-social-circle">
+                                <li>
+                                    <Link>
+                                        <span className="icon-facebook"></span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link>
+                                        <span className="icon-twitter"></span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link>
+                                        <span className="icon-linkedin"></span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link>
+                                        <span className="icon-instagram"></span>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        className="col-md-6 col-lg-4 mb-5 mb-lg-0"
+                        data-aos="fade"
+                        data-aos-delay="200"
+                    >
+                        <div className="person text-center bg-white p-4">
+                            <img
+                                src={NC}
+                                alt="Image"
+                                className="img-fluid rounded-circle mb-3"
+                            />
+                            <h3>Tom Sharp</h3>
+                            <p className="position text-muted">
+                                Co-Founder, COO
+                            </p>
+                            <p className="mb-4">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Nisi at consequatur unde
+                                molestiae quidem provident voluptatum deleniti
+                                quo iste error eos est praesentium distinctio
+                                cupiditate tempore suscipit inventore deserunt
+                                tenetur.
+                            </p>
+                            <ul className="ul-social-circle">
+                                <li>
+                                    <Link>
+                                        <span className="icon-facebook"></span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link>
+                                        <span className="icon-twitter"></span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link>
+                                        <span className="icon-linkedin"></span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link>
+                                        <span className="icon-instagram"></span>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        className="col-md-6 col-lg-4 mb-5 mb-lg-0"
+                        data-aos="fade"
+                        data-aos-delay="200"
+                    >
+                        <div className="person text-center bg-white p-4">
+                            <img
+                                src={DB}
                                 alt="Image"
                                 className="img-fluid rounded-circle mb-3"
                             />
