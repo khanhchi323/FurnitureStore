@@ -12,10 +12,11 @@
     }
     ```
     */
-    import { Fragment, useState } from 'react'
+    import { Fragment, useState, useEffect } from 'react'
     import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
     import { XMarkIcon } from '@heroicons/react/24/outline'
     import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import { fetchAllProduct } from '../../services/ProductService'
 
     const sortOptions = [
         { name: 'Most Popular', current: true },
@@ -75,7 +76,25 @@
 
     export default function CategoryBar() {
         const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+        const [data,setData] = useState([])
+        const [page, setPage] = useState([])
 
+        useEffect(() => {
+            const fetchData = async() => {
+                try {
+                    let res = await fetchAllProduct(page);
+                    setData(res.data.data)
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+            fetchData();
+        },[page]);
+
+        // const handlePageChange = (newPage) => {
+        //     setPage(newPage)
+        // }
+        console.log(data)
         return (
             <div className="bg-white">
                 <div>

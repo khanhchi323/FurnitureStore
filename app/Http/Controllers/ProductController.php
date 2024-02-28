@@ -14,11 +14,11 @@ class ProductController extends Controller
 {
     public function productList()
     {
-        $productList = Product::all();
+        $productList = Product::paginate(9);
         $arr = [
             'status' => 200,
             'message' => 'Danh sách sản phẩm của cửa hàng',
-            'data' => ProductResources::collection($productList)
+            'data' => $productList
         ];
         return response()->json($arr, 200);
     }
