@@ -210,9 +210,32 @@ function SideBar() {
             </div>
             {/* Sidebar ends */}
             {/* Remove class [ h-64 ] when adding a card block */}
-            <div className="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
+            <div className="container mx-auto py-5  md:w-4/5 w-11/12 px-6 bg-gray-800">
                 {/* Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border */}
-                <div className="w-full h-full rounded border-dashed border-2 border-gray-300">{/* Place your content here */}</div>
+                <div className="w-full h-full rounded  ">
+                    <div className="common flex justify-between items-center align-middle ">
+                        <div className=" bg-light-blue-700 w-60 h-48 mr-5">
+                            <b className=" text-4xl text-white ">3</b>
+
+                        </div>
+                        <div className=" bg-light-blue-700 w-60 h-48 mr-6">
+                            <b className=" text-4xl text-white ">3</b>
+
+                        </div>
+                        <div className=" bg-light-blue-700 w-60 h-48">
+                            <b className=" text-4xl text-white ">3</b>
+
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
             </div>
         </div>
     );
