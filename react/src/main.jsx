@@ -1,13 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import './index.css'
-import {
-    BrowserRouter,
-    Outlet,
-    Routes,
-    Route,
-
-} from "react-router-dom";
+import "./index.css";
+import { BrowserRouter, Outlet, Routes, Route } from "react-router-dom";
 import MenuBar from "./components/public/MenuBar";
 import HomePage from "./views/public/HomePage";
 import Footer from "./components/public/footer";
@@ -33,7 +27,6 @@ import ManageMember from "./components/admin/ManageMember";
 import AddMember from "./components/admin/AddMember";
 // import Navbar from "./components/admin/Navbar";
 
-
 const User = () => {
     return (
         <div>
@@ -47,12 +40,7 @@ const User = () => {
 const Admin = () => {
     return (
         <div className="flex flex-col h-screen relative ">
-            <div className="fixed bg-gray-100 w-full h-full -z-10"></div>
-            {/* <div className=" top-0 z-10 ">
-                <Navbar />
-            </div> */}
-
-            <div className="flex flex-grow  items-center">
+            <div className="flex flex-grow">
                 <div className="hidden md:block md:w-auto static left-0 bottom-0">
                     <SideBar />
                 </div>
@@ -79,23 +67,22 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/cart-page" element={<CartPage />} />
                 <Route path="/cre-add" element={<EditAddress />} />
-                <Route path="/payment-method" element={<PaymentMethods/>} />
-                <Route path="/confirmation-order" element={<ComfirmationOrder />} />
+                <Route path="/payment-method" element={<PaymentMethods />} />
+                <Route
+                    path="/confirmation-order"
+                    element={<ComfirmationOrder />}
+                />
                 <Route path="/contactus" element={<ContactUs />} />
                 <Route path="/order-history" element={<OrderHistory />} />
             </Route>
 
-            <Route path="/admin" element={<Admin />}>
-            </Route>
-            <Route path="/manageorder" element={<ManageOrder />}>
-            </Route>
-            <Route path="/manageproduct" element={<ManageProduct />}>
-            </Route>
-            <Route path="/createproduct" element={<CreateProduct />}>
-            </Route>
-            <Route path="/managemember" element={<ManageMember />}>
-            </Route>
-            <Route path="/addmember" element={<AddMember />}>
+            <Route path="admin" element={<Admin />}>
+                <Route index element={<div>ADMIN</div>} />
+                <Route path="manageorder" element={<ManageOrder />} />
+                <Route path="manageproduct" element={<ManageProduct />} />
+                <Route path="createproduct" element={<CreateProduct />} />
+                <Route path="managemember" element={<ManageMember />} />
+                <Route path="addmember" element={<AddMember />} />
             </Route>
         </Routes>
     </BrowserRouter>

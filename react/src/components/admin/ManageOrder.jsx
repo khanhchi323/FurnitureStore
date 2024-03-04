@@ -3,11 +3,56 @@ import React from "react";
 export default function ManageOrder() {
     // Danh sách đơn hàng
     const orders = [
-        { id: 1, username: "user1", recipientName: "Duong Bang", email: "duongbang@gmail.com", phone: "0334455667", address: "Van Chung st", creationDate: "2024-03-01", status: "Pending" },
-        { id: 2, username: "user2", recipientName: "Manh Luu", email: "manhluu@gmail.com", phone: "0122334455", address: "Binh Quoi st", creationDate: "2024-03-02", status: "Delivered" },
-        { id: 3, username: "user3", recipientName: "Nghien Chung", email: "nghienchuong@gmail.com", phone: "0422334455", address: "Le Van Sy st", creationDate: "2024-03-02", status: "Delivered" },
-        { id: 4, username: "user4", recipientName: "Hai Ha", email: "haiha@gmail.com", phone: "042***4455", address: "No given", creationDate: "2024-03-02", status: "Cancel" },
-        { id: 5, username: "user5", recipientName: "Chi", email: "chi@gmail.com", phone: "092***4455", address: "No given", creationDate: "2024-03-02", status: "Cancel" }
+        {
+            id: 1,
+            username: "user1",
+            recipientName: "Duong Bang",
+            email: "duongbang@gmail.com",
+            phone: "0334455667",
+            address: "Van Chung st",
+            creationDate: "2024-03-01",
+            status: "Pending",
+        },
+        {
+            id: 2,
+            username: "user2",
+            recipientName: "Manh Luu",
+            email: "manhluu@gmail.com",
+            phone: "0122334455",
+            address: "Binh Quoi st",
+            creationDate: "2024-03-02",
+            status: "Delivered",
+        },
+        {
+            id: 3,
+            username: "user3",
+            recipientName: "Nghien Chung",
+            email: "nghienchuong@gmail.com",
+            phone: "0422334455",
+            address: "Le Van Sy st",
+            creationDate: "2024-03-02",
+            status: "Delivered",
+        },
+        {
+            id: 4,
+            username: "user4",
+            recipientName: "Hai Ha",
+            email: "haiha@gmail.com",
+            phone: "042***4455",
+            address: "No given",
+            creationDate: "2024-03-02",
+            status: "Cancel",
+        },
+        {
+            id: 5,
+            username: "user5",
+            recipientName: "Chi",
+            email: "chi@gmail.com",
+            phone: "092***4455",
+            address: "No given",
+            creationDate: "2024-03-02",
+            status: "Cancel",
+        },
     ];
 
     // Giới hạn độ dài email
@@ -37,17 +82,33 @@ export default function ManageOrder() {
                         </tr>
                     </thead>
                     <tbody>
-                        {orders.map(order => (
+                        {orders.map((order) => (
                             <tr key={order.id}>
-                                <td className="border px-4 py-2">{order.username}</td>
-                                <td className="border px-4 py-2">{order.recipientName}</td>
-                                <td className="border px-4 py-2">{limitEmailLength(order.email)}</td>
-                                <td className="border px-4 py-2">{order.phone}</td>
-                                <td className="border px-4 py-2">{order.address}</td>
-                                <td className="border px-4 py-2">{order.creationDate}</td>
-                                <td className="border px-4 py-2">{order.status}</td>
                                 <td className="border px-4 py-2">
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
+                                    {order.username}
+                                </td>
+                                <td className="border px-4 py-2">
+                                    {order.recipientName}
+                                </td>
+                                <td className="border px-4 py-2">
+                                    {limitEmailLength(order.email)}
+                                </td>
+                                <td className="border px-4 py-2">
+                                    {order.phone}
+                                </td>
+                                <td className="border px-4 py-2">
+                                    {order.address}
+                                </td>
+                                <td className="border px-4 py-2">
+                                    {order.creationDate}
+                                </td>
+                                <td className="border px-4 py-2">
+                                    {order.status}
+                                </td>
+                                <td className="border px-4 py-2">
+                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                        Edit
+                                    </button>
                                 </td>
                             </tr>
                         ))}
