@@ -26,6 +26,11 @@ import ContactUs from "./views/public/ContactUs";
 import OrderHistory from "./views/public/OrderHistory";
 import Error404 from "./views/public/Error404";
 import SideBar from "./components/admin/SideBar";
+import ManageOrder from "./components/admin/ManageOrder";
+import ManageProduct from "./components/admin/ManageProduct";
+import CreateProduct from "./components/admin/CreateProduct";
+import ManageMember from "./components/admin/ManageMember";
+import AddMember from "./components/admin/AddMember";
 // import Navbar from "./components/admin/Navbar";
 
 
@@ -74,17 +79,23 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/cart-page" element={<CartPage />} />
                 <Route path="/cre-add" element={<EditAddress />} />
-                <Route path="/payment-method" element={<EditAddress />} />
-                <Route
-                    path="/confirmation-order"
-                    element={<ComfirmationOrder />}
-                />
+                <Route path="/payment-method" element={<PaymentMethods/>} />
+                <Route path="/confirmation-order" element={<ComfirmationOrder />} />
                 <Route path="/contactus" element={<ContactUs />} />
                 <Route path="/order-history" element={<OrderHistory />} />
             </Route>
 
             <Route path="/admin" element={<Admin />}>
-
+            </Route>
+            <Route path="/manageorder" element={<ManageOrder />}>
+            </Route>
+            <Route path="/manageproduct" element={<ManageProduct />}>
+            </Route>
+            <Route path="/createproduct" element={<CreateProduct />}>
+            </Route>
+            <Route path="/managemember" element={<ManageMember />}>
+            </Route>
+            <Route path="/addmember" element={<AddMember />}>
             </Route>
         </Routes>
     </BrowserRouter>

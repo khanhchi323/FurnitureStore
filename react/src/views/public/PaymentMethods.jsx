@@ -3,7 +3,7 @@ import COD from "../../assets/public/icon/COD.png";
 import CD from "../../assets/public/icon/Creditcard.png";
 import FS from "../../assets/public/icon/FS.png";
 
-export default function EditAddress() {
+export default function PaymentMethods() {
     return (
         <div className="font-sans m-0 p-0 h-full px-8 flex items-center justify-center bg-gray-100">
             <div className="lg:w-1/2 md:w-3/5 sm:w-3/4 shadow-2xl p-4 my-2 lg:px-10 bg-white ">
