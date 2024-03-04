@@ -6,7 +6,7 @@ export default function CreateProduct({ onCreateProduct }) {
     const [imageFile, setImageFile] = useState(null);
     const [category, setCategory] = useState(""); // Thêm category và setCategory
 
-   
+
     const categories = [
         { id: 1, name: "Cabinet" },
         { id: 2, name: "Table" },
@@ -21,7 +21,7 @@ export default function CreateProduct({ onCreateProduct }) {
     const handleImageChange = (event) => {
         setImageFile(event.target.files[0]);
     };
-    
+
     const handleCategoryChange = (event) => {
         setCategory(event.target.value);
     };
@@ -35,7 +35,7 @@ export default function CreateProduct({ onCreateProduct }) {
             productName: productName,
             imageURL: imageFile ? URL.createObjectURL(imageFile) : null,
             hotProduct: checked,
-            category: category 
+            category: category
         };
         onCreateProduct(newProduct);
     };
@@ -48,16 +48,14 @@ export default function CreateProduct({ onCreateProduct }) {
             <br />
             <div className="w-full flex justify-center">
                 <div className="px-8 w-3/5 shadow pb-4">
-                    <form onSubmit={handleCreateProduct}/>
-                        <p className="font-bold my-1">Category Name</p>
-                        <select className="border rounded-md px-2 py-1 mt-1 border-2 border-gray-500 w-full" value={category} onChange={handleCategoryChange}>
-                            <option value="">Select a category</option>
-                            {categories.map(category => (
-                                <option key={category.id} value={category.name}>{category.name}</option>
-                            ))}
-                        </select>
-                        <p className="font-bold my-1">Product Name</p>
-                        <input type="text" className="border rounded-md px-2 py-1 mt-1 border-2 border-gray-500 w-full" value={productName} onChange={handleProductNameChange} />
+                    <form onSubmit={handleCreateProduct} />
+                    <p className="font-bold my-1">Category Name</p>
+                    <select className="border rounded-md px-2 py-1 mt-1 border-2 border-gray-500 w-full" value={category} onChange={handleCategoryChange}>
+                        <option value="">Select a category</option>
+                        {categories.map(category => (
+                            <option key={category.id} value={category.name}>{category.name}</option>
+                        ))}
+                    </select>
                     <p className="font-bold my-1">Product Name</p>
                     <input type="text" className="border rounded-md px-2 py-1 mt-1 border-2 border-gray-500 w-full" value={productName} onChange={handleProductNameChange} />
 
