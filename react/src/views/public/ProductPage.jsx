@@ -42,7 +42,7 @@ import { fetchAllProduct } from '../../services/ProductService'
                 { value: 'blue', label: 'Blue', checked: true },
                 { value: 'brown', label: 'Brown', checked: false },
                 { value: 'green', label: 'Green', checked: false },
-                { value: 'purple', label: 'Purple', checked: false },
+                { value: 'purple', label: 'Purpl bye', checked: false },
             ],
         },
         {
@@ -324,15 +324,14 @@ import { fetchAllProduct } from '../../services/ProductService'
 
                                 {/* Product grid */}
                                 <div className="lg:col-span-3">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                        {Array.from({ length: 9 }).map((_, index) => (
+                                    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                        {data.map((productList, index) => (
                                             <div key={index} className="bg-white rounded-lg shadow-lg p-4">
                                                 {/* Product Image */}
                                                 <div className="relative overflow-hidden mb-4">
                                                     <img
                                                         className="object-cover w-full h-40 rounded-md"
-                                                        src="https://placekitten.com/400/300"  // Replace with your actual image source
-                                                        alt={`Product ${index + 1}`}
+                                                        src={`src/assets/Product/${productList.images[1]}`}
                                                     />
                                                 </div>
 
@@ -349,7 +348,7 @@ import { fetchAllProduct } from '../../services/ProductService'
                                                 </div>
                                             </div>
                                         ))}
-                                    </div>
+                                    </section>
                                 </div>
                             </div>
                         </section>

@@ -52,7 +52,7 @@ const Admin = () => {
                 <Navbar />
             </div> */}
 
-            <div className="flex flex-grow md:flex-row pr-2">
+            <div className="flex flex-grow  items-center">
                 <div className="hidden md:block md:w-auto static left-0 bottom-0">
                     <SideBar />
                 </div>
