@@ -3,6 +3,11 @@ import Cabinet from "../../assets/public/CateProduct/cabinet.svg"
 import Chair from "../../assets/public/CateProduct/chair.svg"
 
 export default function OrderHistory() {
+    // const [isInvoiceVisible, setIsInvoiceVisible] = useState(false);
+
+    // const toggleInvoiceVisibility = () => {
+    //     setIsInvoiceVisible(!isInvoiceVisible);
+    // };
     return (
         <div className="font-sans m-0 p-0 h-full w-full flex items-center justify-center bg-gray-100">
             <div className="shadow-2xl p-4 m-2 bg-white md:w-3/4 md:px-8">
@@ -45,7 +50,8 @@ export default function OrderHistory() {
                     </div>
                 </div>
                 <div className="md:w-1/4 ml-auto text-right">
-                    <button className="text-sm font-bold   border border-gray-500 border-2 rounded p-1">View Invoice</button>
+                    <button  className="text-sm font-bold   border border-gray-500 border-2 rounded p-1">View Invoice</button>
+                    {/* onClick={toggleInvoiceVisibility} */}
                 </div>
                 <div className="lg:flex w-full mt-4">
                     <div className="flex">
@@ -74,7 +80,7 @@ export default function OrderHistory() {
                         <b className="md:text-lg">Cabinet</b>
                         <p className="text-gray-600">Grey</p>
                         <br />
-                        <p className="text-gray-800">1.599.000đ</p> 
+                        <p className="text-gray-800">1.599.000đ</p>
                     </div>
                     <div className="text-xs flex flex-col ml-12 md:ml-4 sm:block  sm:text-right sm:self-center w-full mt-2 text-gray-600">
                         <button className="sm:mr-8 text-left">View Product</button>

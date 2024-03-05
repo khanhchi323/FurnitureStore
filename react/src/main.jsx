@@ -13,7 +13,7 @@ import ProductPage from "./views/public/ProductPage";
 import ProductDetailPage from "./views/public/ProductDetailPage";
 import AboutUsPage from "./views/public/AboutUsPage";
 import CartPage from "./views/public/CartPage";
-import EditAddress from "./views/public/EditAddress";
+import CreateAddress from "./views/public/CreateAddress";
 import ComfirmationOrder from "./views/public/ComfirmationOrder";
 import PaymentMethods from "./views/public/PaymentMethods";
 import ContactUs from "./views/public/ContactUs";
@@ -25,6 +25,8 @@ import ManageProduct from "./components/admin/ManageProduct";
 import CreateProduct from "./components/admin/CreateProduct";
 import ManageMember from "./components/admin/ManageMember";
 import AddMember from "./components/admin/AddMember";
+import EditProduct from "./components/admin/EditProduct";
+import EditMember from "./components/admin/EditMember";
 // import Navbar from "./components/admin/Navbar";
 
 const User = () => {
@@ -66,15 +68,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/product-detail" element={<ProductDetailPage />} />
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/cart-page" element={<CartPage />} />
-                <Route path="/cre-add" element={<EditAddress />} />
-                <Route path="/payment-method" element={<PaymentMethods />} />
-                <Route
-                    path="/confirmation-order"
-                    element={<ComfirmationOrder />}
-                />
+                <Route path="/cre-add" element={<CreateAddress />} />
+                <Route path="/payment-methods" element={<PaymentMethods />} />
+                <Route path="/confirmation-order" element={<ComfirmationOrder />} />
                 <Route path="/contactus" element={<ContactUs />} />
                 <Route path="/order-history" element={<OrderHistory />} />
-                gvg
             </Route>
 
             <Route path="/admin" element={<Admin />}>
@@ -84,6 +82,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="createproduct" element={<CreateProduct />} />
                 <Route path="managemember" element={<ManageMember />} />
                 <Route path="addmember" element={<AddMember />} />
+                <Route path="editproduct" element={<EditProduct />} />
+                <Route path="editmember" element={<EditMember />} />
             </Route>
         </Routes>
     </BrowserRouter>

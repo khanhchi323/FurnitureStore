@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ManageProduct() {
     // Danh sách sản phẩm
@@ -9,6 +10,7 @@ export default function ManageProduct() {
         { id: 4, categoryName: "Sofa", productName: "Sofa Small", description: " Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text", image: "sofa.jpg", originalPrice: "1.590.000đ", creationDate: "2024-03-02", modifyDate: "2024-03-02", status: "Active", hotProduct: "No" },
         { id: 5, categoryName: "Chair", productName: "Armchair", description: " Text Text Text Text Text", image: "armchair.jpg", originalPrice: "2.900.000đ", creationDate: "2024-03-02", modifyDate: "2024-03-02", status: "Active", hotProduct: "No" },
     ];
+    
     const handleEditProduct = (productId) => {
         console.log("Editing product with ID:", productId);
     };
@@ -21,8 +23,9 @@ export default function ManageProduct() {
             <div className="text-center py-4">
                 <b className="text-3xl">Manage Products</b>
                 <div className="text-left ml-4 mt-6">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">Tạo mới</button>
-                    <br />
+                    <Link to="/admin/createproduct">
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">Tạo mới</button>
+                    </Link><br />
                     <input className="mt-2 h-8 placeholder-gray-500 " type="text" name="find" id="find" placeholder="Tìm kiếm theo tên" />
                     <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded ml-2">Tìm kiếm</button>
                 </div>
@@ -54,10 +57,11 @@ export default function ManageProduct() {
                                 <td className=" border px-2 py-2 w-28">{product.creationDate}</td>
                                 <td className=" border px-2 py-2 w-28">{product.modifyDate}</td>
                                 <td className=" border px-2 py-2 w-16">{product.status}</td>
-                                <td className=" border px-2 py-2 w-24">{product.hotProduct}</td>
+                                <td className=" border px-2 py-2 w-2">{product.hotProduct}</td>
                                 <td className=" border px-2 py-2 flex flex-col items-center ">
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded w-16 mb-1" onClick={() => handleDeleteProduct(product.id)}>View</button>
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded w-16 mb-1" onClick={() => handleEditProduct(product.id)}>Edit</button>
+                                    <Link to="/admin/editproduct">
+                                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded w-16 mb-1" onClick={() => handleEditProduct(product.id)}>Edit</button>
+                                    </Link>
                                     <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-1 rounded w-16" onClick={() => handleDeleteProduct(product.id)}>Delete</button>
                                 </td>
                             </tr>

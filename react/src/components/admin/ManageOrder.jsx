@@ -78,7 +78,6 @@ export default function ManageOrder() {
                             <th className="px-4 py-2">Address</th>
                             <th className="px-4 py-2">Creation date</th>
                             <th className="px-4 py-2">Status</th>
-                            <th className="px-4 py-2">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -96,7 +95,7 @@ export default function ManageOrder() {
                                 <td className="border px-4 py-2">
                                     {order.phone}
                                 </td>
-                                <td className="border px-4 py-2">
+                                <td className="border px-4 py-2 w-32">
                                     {order.address}
                                 </td>
                                 <td className="border px-4 py-2">
@@ -104,11 +103,6 @@ export default function ManageOrder() {
                                 </td>
                                 <td className="border px-4 py-2">
                                     {order.status}
-                                </td>
-                                <td className="border px-4 py-2">
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                        Edit
-                                    </button>
                                 </td>
                             </tr>
                         ))}

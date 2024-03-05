@@ -1,5 +1,19 @@
 import React from "react";
-export default function EditAddress() {
+export default function CreateAddress() {
+    // const [fullName, setFullName] = useState("");
+    // const [phoneNumber, setPhoneNumber] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [addressDetail, setAddressDetail] = useState("");
+
+    // const handleCancel = () => {
+    //     // Xử lý logic khi nhấn nút Hủy bỏ
+    //     console.log("Cancel button clicked");
+    // };
+
+    // const handleUpdate = () => {
+    //     // Xử lý logic khi nhấn nút Cập nhật
+    //     console.log("Update button clicked");
+    // };
     return (
         <div className="font-sans m-0 p-0 h-full px-8 flex items-center justify-center bg-gray-100">
             <div className="lg:w-1/2 md:w-1/2 sm:w-3/4 shadow-2xl p-4 my-2 bg-white ">
@@ -62,8 +76,10 @@ export default function EditAddress() {
                 </div>
                 <div className="w-full flex px-4">
                     <button className="text-start w-full mt-4">Hủy bỏ</button>
+                    {/* onClick={handleCancel} */}
                     <div className="w-full text-end">
                         <button className="bg-black text-blue-50 rounded-2xl py-1 px-4 mt-4   text-end ">Cập nhật
+                            {/* onClick={handleUpdate} */}
                         </button>
                     </div>
                 </div>

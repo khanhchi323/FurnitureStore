@@ -102,7 +102,11 @@ function SideBar() {
                                     <polyline points="8 16 10 10 16 8 14 14 8 16" />
                                     <circle cx={12} cy={12} r={9} />
                                 </svg>
-                                <span className="text-sm  ml-2">Order</span>
+                                <Link to="/admin/manageorder">
+                                    <span className="text-sm  ml-2">
+                                        Order
+                                    </span>
+                                </Link>
                             </div>
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-800 cursor-pointer items-center px-8 py-3">
@@ -144,7 +148,9 @@ function SideBar() {
                                     <path stroke="none" d="M0 0h24v24H0z" />
                                     <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
                                 </svg>
-                                <span className="text-sm  ml-2">Invoices</span>
+                                <Link to="/admin/managemember">
+                                    <span className="text-sm  ml-2">Member</span>
+                                </Link>
                             </div>
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-800 cursor-pointer items-center px-8 py-3">
