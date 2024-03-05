@@ -74,15 +74,16 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 />
                 <Route path="/contactus" element={<ContactUs />} />
                 <Route path="/order-history" element={<OrderHistory />} />
+                gvg
             </Route>
 
-            <Route path="admin" element={<Admin />}>
+            <Route path="/admin" element={<Admin />}>
                 <Route index element={<div>ADMIN</div>} />
-                <Route path="/manageorder" element={<ManageOrder />} />
-                <Route path="/manageproduct" element={<ManageProduct />} />
-                <Route path="/createproduct" element={<CreateProduct />} />
-                <Route path="/managemember" element={<ManageMember />} />
-                <Route path="/addmember" element={<AddMember />} />
+                <Route path="manageorder" element={<ManageOrder />} />
+                <Route path="manageproduct" element={<ManageProduct />} />
+                <Route path="createproduct" element={<CreateProduct />} />
+                <Route path="managemember" element={<ManageMember />} />
+                <Route path="addmember" element={<AddMember />} />
             </Route>
         </Routes>
     </BrowserRouter>
