@@ -59,7 +59,6 @@ export default function ManageMember() {
                                 <td className="border-2 w-40 max-w-[320px] truncate" title={member.address}>{member.address}</td>
                                 <td className="border-2 w-24">{member.status}</td>
                                 <td className="border-2 py-2 flex flex-col items-center ">
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded w-14 mb-1" onClick={() => handleViewMember(member.id)}>View</button>
                                     <Link to="/admin/editmember">
                                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded w-14 mb-1" onClick={() => handleEditMember(member.id)}>Edit</button>
                                     </Link>

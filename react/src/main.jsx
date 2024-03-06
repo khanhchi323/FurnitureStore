@@ -27,6 +27,7 @@ import ManageMember from "./components/admin/ManageMember";
 import AddMember from "./components/admin/AddMember";
 import EditProduct from "./components/admin/EditProduct";
 import EditMember from "./components/admin/EditMember";
+import ManageUser from "./components/admin/ManageUser";
 // import Navbar from "./components/admin/Navbar";
 
 const User = () => {
@@ -84,6 +85,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="addmember" element={<AddMember />} />
                 <Route path="editproduct" element={<EditProduct />} />
                 <Route path="editmember" element={<EditMember />} />
+                <Route path="manageuser" element={<ManageUser />} />
             </Route>
         </Routes>
     </BrowserRouter>
