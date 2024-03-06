@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function LogInForm() {
+ const LogInForm = () => {
     return (
         <div className="font-sans m-0 p-0 flex items-center justify-center bg-white h-screen">
             <div className="  w-96 p-20px rounded-lg shadow-lg shadow-neutral-950 z-10 ">
@@ -59,3 +59,4 @@ export default function LogInForm() {
         </div>
     );
 }
+export default  LogInForm();
