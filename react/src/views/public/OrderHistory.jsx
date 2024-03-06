@@ -1,6 +1,6 @@
 import React from "react";
 import Cabinet from "../../assets/public/CateProduct/cabinet.svg"
-import Chair from "../../assets/public/CateProduct/chair.svg"
+import Chair from "../../assets/public/CateProduct/chair.png"
 
 export default function OrderHistory() {
     // const [isInvoiceVisible, setIsInvoiceVisible] = useState(false);

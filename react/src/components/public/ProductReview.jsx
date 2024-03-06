@@ -1,5 +1,5 @@
 import React from 'react';
-import Chair from "../../assets/public/CateProduct/chair.svg"
+import Chair from "../../assets/public/CateProduct/chair.png"
 
 export default function ProductReview() {
 
