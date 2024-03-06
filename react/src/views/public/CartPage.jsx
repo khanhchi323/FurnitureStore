@@ -16,7 +16,7 @@ export default function CartPage() {
 
     const handleQuantityChange = (productId, newQuantity) => {
         if (newQuantity === 0) {
-            const confirmDelete = window.confirm("Mày rảnh quá thêm dô rồi xóa #$%@^!&#");
+            const confirmDelete = window.confirm("Bae không muốn mua em nữa hả :(((");
             if (confirmDelete) {
                 const updatedProducts = products.filter(product => product.id !== productId);
                 setProducts(updatedProducts);

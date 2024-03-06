@@ -27,6 +27,7 @@ import {
     RocketLaunchIcon,
     Bars2Icon,
 } from "@heroicons/react/24/solid";
+import LoginIcon from "../../assets/public/icon/cart-black.svg"
 import { Link } from "react-router-dom";
 
 // profile menu component
@@ -80,9 +81,8 @@ function ProfileMenu() {
                     />
                     <ChevronDownIcon
                         strokeWidth={2.5}
-                        className={`h-3 w-3 transition-transform ${
-                            isMenuOpen ? "rotate-180" : ""
-                        }`}
+                        className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
+                            }`}
                     />
                 </Button>
             </MenuHandler>
@@ -94,16 +94,14 @@ function ProfileMenu() {
                             <MenuItem
                                 key={label}
                                 onClick={closeMenu}
-                                className={`flex items-center gap-2 rounded ${
-                                    isLastItem
-                                        ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
-                                        : ""
-                                }`}
+                                className={`flex items-center gap-2 rounded ${isLastItem
+                                    ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
+                                    : ""
+                                    }`}
                             >
                                 {React.createElement(icon, {
-                                    className: `h-4 w-4 ${
-                                        isLastItem ? "text-red-500" : ""
-                                    }`,
+                                    className: `h-4 w-4 ${isLastItem ? "text-red-500" : ""
+                                        }`,
                                     strokeWidth: 2,
                                 })}
                                 <Typography
@@ -168,7 +166,7 @@ function NavListMenu() {
                 <MenuHandler>
                     <Typography
                         as="a"
-                    
+
                         variant="small"
                         className="font-normal"
                     >
@@ -177,9 +175,8 @@ function NavListMenu() {
                             Pages{" "}
                             <ChevronDownIcon
                                 strokeWidth={2}
-                                className={`h-3 w-3 transition-transform ${
-                                    isMenuOpen ? "rotate-180" : ""
-                                }`}
+                                className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
+                                    }`}
                             />
                         </MenuItem>
                     </Typography>
@@ -275,7 +272,7 @@ export default function MenuBar() {
                 <Link>
                     <Typography
                         as="a"
-                    
+
                         className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
                     >
                         CCHLB
@@ -294,10 +291,11 @@ export default function MenuBar() {
                 >
                     <Bars2Icon className="h-6 w-6" />
                 </IconButton>
-
+<Link to="/cart-page">
                 <Button size="sm" variant="text">
-                    <span>Log In</span>
+                    <img src={LoginIcon} alt="" />
                 </Button>
+                </Link>
                 <ProfileMenu />
             </div>
             <Collapse open={isNavOpen} className="overflow-scroll">
