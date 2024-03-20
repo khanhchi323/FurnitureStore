@@ -1,26 +1,30 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import COD from "../../assets/public/icon/COD.png";
 import CD from "../../assets/public/icon/Creditcard.png";
 import FS from "../../assets/public/icon/FS.png";
 
 export default function PaymentMethods() {
     const [selectedOption, setSelectedOption] = useState(null);
+    const history = useHistory();
 
     const handleOptionChange = (option) => {
         setSelectedOption(option);
     };
 
     const handleBackButtonClick = () => {
-        // Thực hiện hành động khi người dùng nhấp vào nút "Back"
-        console.log("Back button clicked");
+        history.push("/cart-item");
     };
 
     const handleCompleteOrderButtonClick = () => {
-        // Thực hiện hành động khi người dùng nhấp vào nút "Complete Order"
-        if (selectedOption) {
-            console.log("Complete order with option:", selectedOption);
+        if (selectedOption === "COD") {
+            console.log("Cash on Delivery selected. Redirecting to success page...");
+            history.push("/payment-success");
         } else {
-            console.log("Please select a payment option.");
+            // Gửi mã vạch ra màn hình
+            console.log("Sending barcode for payment...");
+            // Sau khi gửi mã vạch, chuyển đến trang thanh toán thành công
+            history.push("/payment-success");
         }
     };
 

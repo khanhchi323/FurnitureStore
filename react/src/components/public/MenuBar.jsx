@@ -217,7 +217,7 @@ const navListItems = [
         link: "/",
     },
     {
-        label: "Categories",
+        label: "All Product",
         icon: CubeTransparentIcon,
         link: "/product",
     },
@@ -269,7 +269,7 @@ export default function MenuBar() {
     return (
         <Navbar className="mx-auto max-w-screen-3xl p-2 lg:rounded-xl lg:pl-6">
             <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
-                <Link>
+                <Link to = "/">
                     <Typography
                         as="a"
 
