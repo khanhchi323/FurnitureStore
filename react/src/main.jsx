@@ -19,6 +19,7 @@ import PaymentMethods from "./views/public/PaymentMethods";
 import ContactUs from "./views/public/ContactUs";
 import OrderHistory from "./views/public/OrderHistory";
 import Error404 from "./views/public/Error404";
+import PaymentSuccess from "./views/public/PaymentSuccess";
 import SideBar from "./components/admin/SideBar";
 import ManageOrder from "./components/admin/ManageOrder";
 import ManageProduct from "./components/admin/ManageProduct";
@@ -74,6 +75,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/confirmation-order" element={<ComfirmationOrder />} />
                 <Route path="/contactus" element={<ContactUs />} />
                 <Route path="/order-history" element={<OrderHistory />} />
+                <Route path="/payment-success" element={<PaymentSuccess />} />
             </Route>
 
             <Route path="/admin" element={<Admin />}>
@@ -86,6 +88,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="editproduct" element={<EditProduct />} />
                 <Route path="editmember" element={<EditMember />} />
                 <Route path="manageuser" element={<ManageUser />} />
+                
             </Route>
         </Routes>
     </BrowserRouter>

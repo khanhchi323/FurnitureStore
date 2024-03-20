@@ -128,7 +128,9 @@ function SideBar() {
                                     <polyline points="17 8 21 12 17 16" />
                                     <line x1={14} y1={4} x2={10} y2={20} />
                                 </svg>
+                                <Link to = "/admin/manageuser">
                                 <span className="text-sm  ml-2">User</span>
+                                </Link>
                             </div>
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-800 cursor-pointer items-center  px-8 py-3">
