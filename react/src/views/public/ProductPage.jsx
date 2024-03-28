@@ -29,6 +29,7 @@ export default function CategoryBar() {
     // const handlePageChange = (newPage) => {
     //     setPage(newPage);
     // };
+    //
     console.log(data);
     return (
         <div className="bg-white">
