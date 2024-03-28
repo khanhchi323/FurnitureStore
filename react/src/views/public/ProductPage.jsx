@@ -3,6 +3,7 @@ import axios from "../../services/AxiosCustom";
 
 const url = "https://cchlb.store/furniturestore/public/api/products";
 
+
 export default function CategoryBar() {
     
 
