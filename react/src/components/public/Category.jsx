@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
     CarouselProvider,
     Slider,
@@ -8,30 +8,34 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import { fetchAllCategory } from "../../services/CategoryService";
+//import axios from "../../services/CategoryService";
+import axios from "../../services/AxiosCustom";
+const url = "https://cchlb.store/furniturestore/public/api/categories";
 
-const CategorySlider = () => {
+export default function Category() {
     const [data, setData] = useState([]);
-
-    useEffect(() => {
-        getCategoryService();
-    }, []);
-
-    const getCategoryService = async () => {
-        try {
-            let res = await fetchAllCategory();
-            if (res && res.data) {
-                setData(res.data);
-            }
-        } catch (error) {
-            console.error("Error fetching categories:", error);
-        }
+    // const [page, setPage] = useState([]);
+    const fetchAllCategories = () => {
+        return axios.get(url).then((res) => setData(res));
     };
-    console.log(data);
-
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                //let res = await res.json()
+                let res = await fetchAllCategories();
+                console.log(res);
+                setData(res.data);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchData();
+    }, []);
 
     return (
         <div className="container mx-auto">
+            <b className=" flex justify-center font-semibold text-2xl">ALL CATEGORIES</b>
+
             <div className="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
                 <CarouselProvider
                     naturalSlideWidth={100}
@@ -66,24 +70,20 @@ const CategorySlider = () => {
                         </ButtonBack>
                         <div>
                             <Slider>
-                                {data.map((ProductCategoryList, index) => (
+                                {data.map((CategoryList, index) => (
                                     <Slide index={index} key={index}>
                                         <Link
-                                            to={`../../components/public/Category.jsx/${ProductCategoryList.product_category_id}`}
+                                            to={`category/${CategoryList.id}`}
                                             className="category-slide"
                                         >
                                             {/* Your category slide content goes here */}
                                             <img
-                                                src={`../../../src/assets/public/CateProduct/${ProductCategoryList.image}`}
-                                                alt={
-                                                    ProductCategoryList.product_category_name
-                                                } // Assuming your category object has a "name" property
-                                                className="category-image"
+                                                src={`https://cchlb.store/furniturestore/public/${CategoryList.image}`}
+                                                alt={CategoryList.name} // Assuming your category object has a "name" property
+                                                className=" w-[50%] h-[100%]"
                                             />
                                             <h3 className="category-name">
-                                                {
-                                                    ProductCategoryList.product_category_name
-                                                }
+                                                {CategoryList.name}
                                             </h3>
                                         </Link>
                                     </Slide>
@@ -117,6 +117,4 @@ const CategorySlider = () => {
             </div>
         </div>
     );
-};
-
-export default CategorySlider;
+}

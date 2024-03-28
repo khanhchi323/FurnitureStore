@@ -1,4 +1,4 @@
-import React from "react";
+
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Outlet, Routes, Route } from "react-router-dom";
@@ -10,6 +10,7 @@ import RegisterPage from "./views/public/RegisterPage";
 import ProfilePage from "./views/public/ProfilePage";
 import EditProfilePage from "./views/public/EditProfilePage";
 import ProductPage from "./views/public/ProductPage";
+import CategoryPage from "./views/public/CategoryPage";
 import ProductDetailPage from "./views/public/ProductDetailPage";
 import AboutUsPage from "./views/public/AboutUsPage";
 import CartPage from "./views/public/CartPage";
@@ -66,6 +67,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/profile" element={<ProfilePage />} />
                 <Route path="/edit-profile" element={<EditProfilePage />} />
                 <Route path="/product" element={<ProductPage />} />
+                <Route path="/category/:id" element={<CategoryPage />} />
                 <Route path="/product-detail" element={<ProductDetailPage />} />
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/cart-page" element={<CartPage />} />
@@ -86,6 +88,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="editproduct" element={<EditProduct />} />
                 <Route path="editmember" element={<EditMember />} />
                 <Route path="manageuser" element={<ManageUser />} />
+                
             </Route>
         </Routes>
     </BrowserRouter>

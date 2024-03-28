@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Cabinet from "../../assets/public/CateProduct/cabinet.svg";
 import Chair from "../../assets/public/CateProduct/chair.png";
 import Sofa from "../../assets/public/CateProduct/sofa.svg";
